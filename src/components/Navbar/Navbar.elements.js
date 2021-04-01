@@ -7,7 +7,8 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-bottom: ${props => props.theme.spacingUtils.normal};
-  @media (max-width: ${props => props.theme.size.tablet}) {
+  z-index: 100;
+  @media (max-width: ${props => props.theme.size.mobileXL}) {
     height: 85px;
     padding: 0 1.5rem;
   }
@@ -36,14 +37,14 @@ export const NavLinks = styled.ul`
       }
     }
   }
-  @media (max-width: ${props => props.theme.size.tablet}) {
+  @media (max-width: ${props => props.theme.size.mobileXL}) {
     display: none;
   }
 `;
 
 export const FontAwesomeContainer = styled.div`
   font-size: 2rem;
-  @media (min-width: ${props => props.theme.size.tablet}) {
+  @media (min-width: ${props => props.theme.size.mobileXL}) {
     display: none;
   }
 `;
@@ -56,6 +57,7 @@ export const HamburgerMenu = styled.ul`
   ${props => `bottom: calc(-235px - 2 * ${props.theme.spacingUtils.small});`}
   left: 0;
   right: 0;
+  z-index: 10000;
   padding-top: ${props => props.theme.spacingUtils.small};
   padding-bottom: ${props => props.theme.spacingUtils.small};
   padding-left: ${props => props.theme.spacingUtils.extraSmall};
@@ -67,7 +69,7 @@ export const HamburgerMenu = styled.ul`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: ${props => props.theme.size.tablet}) {
+  @media (min-width: ${props => props.theme.size.mobileXL}) {
     display: none;
   }
 

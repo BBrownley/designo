@@ -17,8 +17,10 @@ export const size = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
+  mobileXL: "700px",
   tablet: "768px",
   laptop: "1024px",
+  laptopM: "1100px",
   laptopL: "1440px",
   desktop: "2560px"
 };

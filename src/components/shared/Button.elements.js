@@ -28,8 +28,8 @@ export const Button = styled.button`
   transition: 0.25s;
   font-family: "Jost", sans-serif;
   &:hover {
-    cursor: pointer;
     background-color: ${props => props.theme.colors.orangeLight};
+    cursor: pointer;
   }
   ${({ color }) => handleColorType(color)};
 `;

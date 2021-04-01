@@ -12,7 +12,7 @@ import {
 } from "./Navbar.elements";
 
 export default function Navbar() {
-  const [hamburgerOpen, setHamburgerOpen] = useState(true);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   const toggleHamburgerMenu = () => {
     setHamburgerOpen(prevState => !prevState);
