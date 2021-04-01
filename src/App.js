@@ -1,12 +1,13 @@
 import Navbar from "./components/Navbar/Navbar";
+import {App as Container} from "./App.elements"
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <div className="wrapper">
         <Navbar />
       </div>
-    </div>
+    </Container>
   );
 }
 
