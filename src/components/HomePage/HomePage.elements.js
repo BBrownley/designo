@@ -138,19 +138,6 @@ export const ProjectCategories = styled.div`
       }
     }
   }
-
-  /* @media (max-width: 600px) {
-    > div:nth-child(1) {
-      div {
-        height: 250px;
-      }
-    }
-    > div:nth-child(2) {
-      div {
-        min-height: 250px;
-      }
-    }
-  } */
 `;
 
 export const CategoryImage = styled.div`
@@ -194,16 +181,6 @@ export const CategoryImage = styled.div`
         background-size: 100%;
       `}
   }
-  /* @media (max-width: 600px) {
-    ${props =>
-      props.imageSm &&
-      css`
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url(${props => props.imageSm});
-        background-position: bottom right;
-        background-size: 200%;
-      `}
-  } */
 `;
 
 export const ProjectDescription = styled.div`
@@ -213,12 +190,10 @@ export const ProjectDescription = styled.div`
   left: 50%;
   z-index: 100;
   transform: translate(-50%, -50%);
-  /* line-height: 4rem; */
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
   display: inline-block;
-  /* background-color: cyan; */
   h2 {
     font-weight: 400;
     padding: 0 1rem;
@@ -230,5 +205,55 @@ export const ProjectDescription = styled.div`
   .chevron-right {
     color: ${props => props.theme.colors.orange};
     margin-left: 0.25rem;
+  }
+`;
+
+export const Attributes = styled.div`
+  margin-top: ${props => props.theme.spacingUtils.extraLarge};
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+  .bg-leaf {
+    position: absolute;
+    left: 250px;
+    bottom: -300px;
+    z-index: -100;
+    transform: rotate(180deg);
+  }
+`;
+
+export const Attribute = styled.div`
+  text-align: center;
+  line-height: 26px;
+  width: 30%;
+`;
+
+export const AttributeImage = styled.div`
+  background-image: url(${props => props.image});
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 4rem;
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #bg-circle-2 {
+    transform: rotate(-90deg);
+  }
+  #bg-circle-3 {
+    transform: rotate(90deg);
+  }
+`;
+
+export const AttributeDesc = styled.div`
+  h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 2.5rem;
   }
 `;
