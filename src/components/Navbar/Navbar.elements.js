@@ -44,7 +44,7 @@ export const NavLinks = styled.ul`
 
 export const FontAwesomeContainer = styled.div`
   font-size: 2rem;
-  @media (min-width: ${props => props.theme.size.mobileXL}) {
+  @media (min-width: 701px) {
     display: none;
   }
 `;
@@ -69,7 +69,7 @@ export const HamburgerMenu = styled.ul`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: ${props => props.theme.size.mobileXL}) {
+  @media (min-width: 701px) {
     display: none;
   }
 

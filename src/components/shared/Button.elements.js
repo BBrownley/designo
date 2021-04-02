@@ -27,6 +27,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   transition: 0.25s;
   font-family: "Jost", sans-serif;
+  position: relative;
+  z-index: 10;
   &:hover {
     background-color: ${props => props.theme.colors.orangeLight};
     cursor: pointer;

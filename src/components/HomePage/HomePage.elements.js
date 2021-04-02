@@ -7,7 +7,7 @@ export const Hero = styled.div`
   height: 640px;
   border-radius: 0.5rem;
   position: relative;
-  z-index: -100;
+  /* z-index: -100; */
   padding: 0 ${props => props.theme.spacingUtils.large};
   display: flex;
   justify-content: space-between;
@@ -15,11 +15,12 @@ export const Hero = styled.div`
   line-height: 26px;
   .hero-bg {
     position: absolute;
+    z-index:-1;
     right: 0;
   }
   div:nth-child(1) {
     padding-top: ${props => props.theme.spacingUtils.extraLarge};
-    z-index: 100;
+
     & > *:not(:last-child) {
       margin-bottom: ${props => props.theme.spacingUtils.verySmall};
     }
@@ -44,13 +45,16 @@ export const Hero = styled.div`
       right: -100px;
     }
   }
-  @media (max-width: 752px) {
+  @media (max-width: 770px) {
     h1,
     h2 {
       font-size: 2rem;
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
+    border-radius: 0;
+  }
+  @media (max-width: 620px) {
     padding: 0 ${props => props.theme.spacingUtils.extraSmall};
     div:nth-child(1) {
       padding-top: 3rem;
