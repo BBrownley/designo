@@ -1,9 +1,10 @@
 import React from "react";
 import heroBg from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 
-import webDesign from "../../assets/home/desktop/image-web-design-large.jpg";
-import appDesign from "../../assets/home/desktop/image-app-design.jpg";
-import graphicDesign from "../../assets/home/desktop/image-graphic-design.jpg";
+import webDesignSm from "../../assets/home/desktop/image-web-design-small.jpg";
+import webDesignLg from "../../assets/home/desktop/image-web-design-large.jpg";
+import appDesignLg from "../../assets/home/desktop/image-app-design.jpg";
+import graphicDesignLg from "../../assets/home/desktop/image-graphic-design.jpg";
 
 import {
   Hero,
@@ -37,7 +38,7 @@ export default function HomePage() {
       </Hero>
       <ProjectCategories>
         <div>
-          <CategoryImage image={webDesign}>
+          <CategoryImage imageLg={webDesignLg} imageSm={webDesignSm}>
             <ProjectDescription>
               <h2>Web design</h2>
               <a>
@@ -51,7 +52,7 @@ export default function HomePage() {
           </CategoryImage>
         </div>
         <div>
-          <CategoryImage image={appDesign}>
+          <CategoryImage imageLg={appDesignLg}>
             <ProjectDescription>
               <h2>App design</h2>
               <a>
@@ -63,7 +64,7 @@ export default function HomePage() {
               </a>
             </ProjectDescription>
           </CategoryImage>
-          <CategoryImage image={graphicDesign}>
+          <CategoryImage imageLg={graphicDesignLg}>
             <ProjectDescription>
               <h2>Graphic design</h2>
               <a>

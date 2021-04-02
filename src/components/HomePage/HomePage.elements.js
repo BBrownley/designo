@@ -1,9 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
-
-import webDesign from "../../assets/home/desktop/image-web-design-large.jpg";
-import appDesign from "../../assets/home/desktop/image-app-design.jpg";
-import graphicDesign from "../../assets/home/desktop/image-graphic-design.jpg";
 
 export const Hero = styled.div`
   background-color: ${props => props.theme.colors.orange};
@@ -11,7 +7,6 @@ export const Hero = styled.div`
   height: 640px;
   border-radius: 0.5rem;
   position: relative;
-  /* z-index: -100; */
   padding: 0 ${props => props.theme.spacingUtils.large};
   display: flex;
   justify-content: space-between;
@@ -123,7 +118,39 @@ export const ProjectCategories = styled.div`
 
   @media (max-width: ${props => props.theme.size.tablet}) {
     flex-direction: column;
+    padding: 1rem;
+    > div:nth-child(1) {
+      margin-right: 0;
+
+      flex: 0;
+      margin-bottom: 1rem;
+      div {
+        height: 200px;
+        div {
+          height: 152px;
+        }
+      }
+    }
+    > div:nth-child(2) {
+      margin-left: 0;
+      div:nth-child(1) {
+        margin-bottom: 0;
+      }
+    }
   }
+
+  /* @media (max-width: 600px) {
+    > div:nth-child(1) {
+      div {
+        height: 250px;
+      }
+    }
+    > div:nth-child(2) {
+      div {
+        min-height: 250px;
+      }
+    }
+  } */
 `;
 
 export const CategoryImage = styled.div`
@@ -131,7 +158,7 @@ export const CategoryImage = styled.div`
   position: relative;
   border-radius: 0.5rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${props => props.image});
+    url(${props => props.imageLg});
   &:hover {
     cursor: pointer;
     .chevron-right {
@@ -155,6 +182,28 @@ export const CategoryImage = styled.div`
     right: 0;
     transition: 0.25s opacity ease;
   }
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    background-position: center;
+    background-size: cover;
+    ${props =>
+      props.imageSm &&
+      css`
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(${props => props.imageSm});
+        background-position: bottom;
+        background-size: 100%;
+      `}
+  }
+  /* @media (max-width: 600px) {
+    ${props =>
+      props.imageSm &&
+      css`
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(${props => props.imageSm});
+        background-position: bottom right;
+        background-size: 200%;
+      `}
+  } */
 `;
 
 export const ProjectDescription = styled.div`
@@ -168,8 +217,10 @@ export const ProjectDescription = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
+  display: inline-block;
   h2 {
     font-weight: 400;
+    padding: 0 1rem;
   }
   a {
     letter-spacing: 4px;
@@ -178,4 +229,9 @@ export const ProjectDescription = styled.div`
     color: ${props => props.theme.colors.orange};
     margin-left: 0.25rem;
   }
+
+  /* @media (max-width: 600px) {
+    line-height: 2rem;
+    height: auto;
+  } */
 `;
