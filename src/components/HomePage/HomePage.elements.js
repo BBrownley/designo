@@ -127,7 +127,7 @@ export const ProjectCategories = styled.div`
       div {
         height: 200px;
         div {
-          height: 152px;
+          height: auto;
         }
       }
     }
@@ -212,26 +212,23 @@ export const ProjectDescription = styled.div`
   top: 50%;
   left: 50%;
   z-index: 100;
-  transform: translate(-50%, -35%);
-  line-height: 4rem;
+  transform: translate(-50%, -50%);
+  /* line-height: 4rem; */
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
   display: inline-block;
+  /* background-color: cyan; */
   h2 {
     font-weight: 400;
     padding: 0 1rem;
+    margin-bottom: 2.25rem;
   }
   a {
-    letter-spacing: 4px;
+    letter-spacing: 5px;
   }
   .chevron-right {
     color: ${props => props.theme.colors.orange};
     margin-left: 0.25rem;
   }
-
-  /* @media (max-width: 600px) {
-    line-height: 2rem;
-    height: auto;
-  } */
 `;
