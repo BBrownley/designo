@@ -93,31 +93,9 @@ export const HeroPhone = styled.div`
 export const ProjectCategories = styled.div`
   margin-top: ${props => props.theme.spacingUtils.extraLarge};
   display: flex;
+
   height: 640px;
   text-align: center;
-
-  .description {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    transform: translate(-50%, -35%);
-    line-height: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width: 100%;
-    h2 {
-      font-weight: 400;
-    }
-    a {
-      letter-spacing: 4px;
-    }
-    .chevron-right {
-      color: ${props => props.theme.colors.orange};
-      margin-left: 0.25rem;
-    }
-  }
 
   > div {
     flex: 1;
@@ -143,42 +121,61 @@ export const ProjectCategories = styled.div`
     }
   }
 
-  .category-image {
-    height: 100%;
-    position: relative;
-    border-radius: 0.5rem;
-    &:hover {
-      cursor: pointer;
-      .chevron-right {
-        margin-left: 0.75rem;
-        transition: 0.25s;
-      }
-      &:after {
-        border-radius: 0.5rem;
-        background-color: rgba(231, 129, 107, 0.5);
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        transition: 0.25s;
-      }
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    flex-direction: column;
+  }
+`;
+
+export const CategoryImage = styled.div`
+  height: 100%;
+  position: relative;
+  border-radius: 0.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${props => props.image});
+  &:hover {
+    cursor: pointer;
+    .chevron-right {
+      margin-left: 0.75rem;
+      transition: 0.25s;
+    }
+    &:after {
+      opacity: 1;
+      transition: 0.25s opacity ease;
     }
   }
-
-  #web-design {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${webDesign});
+  &:after {
+    border-radius: 0.5rem;
+    background-color: rgba(231, 129, 107, 0.5);
+    opacity: 0;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.25s opacity ease;
   }
+`;
 
-  #app-design {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${appDesign});
+export const ProjectDescription = styled.div`
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -35%);
+  line-height: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  h2 {
+    font-weight: 400;
   }
-
-  #graphic-design {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${graphicDesign});
+  a {
+    letter-spacing: 4px;
+  }
+  .chevron-right {
+    color: ${props => props.theme.colors.orange};
+    margin-left: 0.25rem;
   }
 `;

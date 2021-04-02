@@ -1,7 +1,17 @@
 import React from "react";
 import heroBg from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 
-import { Hero, HeroPhone, ProjectCategories } from "./HomePage.elements";
+import webDesign from "../../assets/home/desktop/image-web-design-large.jpg";
+import appDesign from "../../assets/home/desktop/image-app-design.jpg";
+import graphicDesign from "../../assets/home/desktop/image-graphic-design.jpg";
+
+import {
+  Hero,
+  HeroPhone,
+  ProjectCategories,
+  ProjectDescription,
+  CategoryImage
+} from "./HomePage.elements";
 import { Button } from "../shared/Button.elements";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,8 +37,8 @@ export default function HomePage() {
       </Hero>
       <ProjectCategories>
         <div>
-          <div id="web-design" class="category-image">
-            <div className="description">
+          <CategoryImage image={webDesign}>
+            <ProjectDescription>
               <h2>Web design</h2>
               <a>
                 View projects{" "}
@@ -37,12 +47,12 @@ export default function HomePage() {
                   className="chevron-right"
                 ></FontAwesomeIcon>
               </a>
-            </div>
-          </div>
+            </ProjectDescription>
+          </CategoryImage>
         </div>
         <div>
-          <div id="app-design" class="category-image">
-            <div className="description">
+          <CategoryImage image={appDesign}>
+            <ProjectDescription>
               <h2>App design</h2>
               <a>
                 View projects{" "}
@@ -51,10 +61,10 @@ export default function HomePage() {
                   className="chevron-right"
                 ></FontAwesomeIcon>
               </a>
-            </div>
-          </div>
-          <div id="graphic-design" class="category-image">
-            <div className="description">
+            </ProjectDescription>
+          </CategoryImage>
+          <CategoryImage image={graphicDesign}>
+            <ProjectDescription>
               <h2>Graphic design</h2>
               <a>
                 View projects{" "}
@@ -63,8 +73,8 @@ export default function HomePage() {
                   className="chevron-right"
                 ></FontAwesomeIcon>
               </a>
-            </div>
-          </div>
+            </ProjectDescription>
+          </CategoryImage>
         </div>
       </ProjectCategories>
     </div>
