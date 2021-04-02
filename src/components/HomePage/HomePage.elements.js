@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
 
+import webDesign from "../../assets/home/desktop/image-web-design-large.jpg";
+import appDesign from "../../assets/home/desktop/image-app-design.jpg";
+import graphicDesign from "../../assets/home/desktop/image-graphic-design.jpg";
+
 export const Hero = styled.div`
   background-color: ${props => props.theme.colors.orange};
   color: white;
@@ -15,7 +19,7 @@ export const Hero = styled.div`
   line-height: 26px;
   .hero-bg {
     position: absolute;
-    z-index:-1;
+    z-index: -1;
     right: 0;
   }
   div:nth-child(1) {
@@ -83,5 +87,98 @@ export const HeroPhone = styled.div`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+`;
+
+export const ProjectCategories = styled.div`
+  margin-top: ${props => props.theme.spacingUtils.extraLarge};
+  display: flex;
+  height: 640px;
+  text-align: center;
+
+  .description {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -35%);
+    line-height: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    h2 {
+      font-weight: 400;
+    }
+    a {
+      letter-spacing: 4px;
+    }
+    .chevron-right {
+      color: ${props => props.theme.colors.orange};
+      margin-left: 0.25rem;
+    }
+  }
+
+  > div {
+    flex: 1;
+  }
+
+  > div:nth-child(1) {
+    margin-right: 1rem;
+  }
+  > div:nth-child(2) {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      flex: 1;
+    }
+
+    div:nth-child(1) {
+      margin-bottom: 1rem;
+    }
+    div:nth-child(2) {
+      margin-top: 1rem;
+    }
+  }
+
+  .category-image {
+    height: 100%;
+    position: relative;
+    border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      .chevron-right {
+        margin-left: 0.75rem;
+        transition: 0.25s;
+      }
+      &:after {
+        border-radius: 0.5rem;
+        background-color: rgba(231, 129, 107, 0.5);
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: 0.25s;
+      }
+    }
+  }
+
+  #web-design {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${webDesign});
+  }
+
+  #app-design {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${appDesign});
+  }
+
+  #graphic-design {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${graphicDesign});
   }
 `;
