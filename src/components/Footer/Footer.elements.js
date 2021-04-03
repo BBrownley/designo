@@ -1,11 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const FooterContainer = styled.div`
-  margin-top: 7.5rem;
+  margin-top: 17rem;
   position: relative;
   z-index: 100;
   color: white;
-  overflow: hidden;
+
   .circles {
     position: absolute;
     top: -100px;
@@ -25,10 +25,18 @@ export const FooterContainer = styled.div`
 export const FooterTop = styled.div`
   background-color: ${props => props.theme.colors.peach};
   height: 292px;
+  max-width: 1111px;
   border-radius: 15px;
   padding: 0 6.125rem;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: -190px;
+  z-index: 10;
+  /* left: 2rem;
+  right: 2rem; */
+
+  overflow: hidden;
   > div {
     display: flex;
     align-items: center;
@@ -45,6 +53,27 @@ export const FooterTop = styled.div`
   p {
     line-height: 26px;
     margin-top: 2rem;
+  }
+  @media (max-width: 900px) {
+    height: 380px;
+    left: 2rem;
+    right: 2rem;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button {
+      margin-top: 2rem;
+    }
+    p {
+      padding: 0 1.25rem;
+    }
+  }
+  @media (min-width: 901px) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 1100px;
   }
 `;
 

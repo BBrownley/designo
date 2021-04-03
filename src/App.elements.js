@@ -5,7 +5,6 @@ export const App = styled.div`
   font-size: 1rem;
   overflow: hidden;
   .wrapper {
-    min-height: 1000vh;
     max-width: 1111px;
     margin: 0 auto;
     /* padding-top: 4rem; */

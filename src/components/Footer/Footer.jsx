@@ -31,14 +31,14 @@ export default function Footer() {
           <h2>Let's talk about your project</h2>
           <p>
             Ready to take it to the next level? Contact us today and find out
-            how our expertise can help your business grow. Get in touch
+            how our expertise can help your business grow.
           </p>
         </div>
         <div>
           <Button color={"white"}>Get in touch</Button>
         </div>
-        <img src={twoCircles} className="circles two-circles" />
-        <img src={threeCircles} className="circles three-circles" />
+        {/* <img src={twoCircles} className="circles two-circles" />
+        <img src={threeCircles} className="circles three-circles" /> */}
       </FooterTop>
       <FooterBottom>
         <Logo image={logoLight}></Logo>
