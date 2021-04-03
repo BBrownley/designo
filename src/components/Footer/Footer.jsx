@@ -41,37 +41,47 @@ export default function Footer() {
         <img src={threeCircles} className="circles three-circles" /> */}
       </FooterTop>
       <FooterBottom>
-        <Logo image={logoLight}></Logo>
-        <FooterLinks>
-          <li>Our company</li>
-          <li>Locations</li>
-          <li>Contact</li>
-        </FooterLinks>
-        <LocationContact>
-          <p>
-            <strong>Designo Central Office</strong>
-          </p>
-          <p>3886 Wellington Street</p>
-          <p>Toronto, Ontario M9C 3J5</p>
-        </LocationContact>
-        <LocationContact>
-          <p>
-            <strong>Contact Us (Central Office)</strong>
-          </p>
-          <strong>
-            <p>P : +1 253-863-8967</p>
-          </strong>
-          <strong>
-            <p>M : contact@designo.co</p>
-          </strong>
-        </LocationContact>
-        <Socials>
-          <SocialIcon src={iconFb}/>
-          <SocialIcon src={iconYoutube}/>
-          <SocialIcon src={iconTwitter}/>
-          <SocialIcon src={iconPinterest}/>
-          <SocialIcon src={iconInstagram}/>
-        </Socials>
+        <div>
+          <div className="navigation">
+            <Logo image={logoLight}></Logo>
+            <FooterLinks>
+              <li>Our company</li>
+              <li>Locations</li>
+              <li>Contact</li>
+            </FooterLinks>
+          </div>
+          <div className="info">
+            <div>
+              <LocationContact>
+                <p>
+                  <strong>Designo Central Office</strong>
+                </p>
+                <p>3886 Wellington Street</p>
+                <p>Toronto, Ontario M9C 3J5</p>
+              </LocationContact>
+              <LocationContact>
+                <p>
+                  <strong>Contact Us (Central Office)</strong>
+                </p>
+                <strong>
+                  <p>P : +1 253-863-8967</p>
+                </strong>
+                <strong>
+                  <p>M : contact@designo.co</p>
+                </strong>
+              </LocationContact>
+            </div>
+         
+              <Socials>
+                <SocialIcon src={iconFb} />
+                <SocialIcon src={iconYoutube} />
+                <SocialIcon src={iconTwitter} />
+                <SocialIcon src={iconPinterest} />
+                <SocialIcon src={iconInstagram} />
+              </Socials>
+            
+          </div>
+        </div>
       </FooterBottom>
     </FooterContainer>
   );

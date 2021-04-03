@@ -25,7 +25,7 @@ export const FooterContainer = styled.div`
 export const FooterTop = styled.div`
   background-color: ${props => props.theme.colors.peach};
   height: 292px;
-  max-width: 1111px;
+  max-width: 945px;
   border-radius: 15px;
   padding: 0 6.125rem;
   display: flex;
@@ -73,7 +73,6 @@ export const FooterTop = styled.div`
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
-    max-width: 1100px;
   }
 `;
 
@@ -81,6 +80,34 @@ export const FooterBottom = styled.div`
   background-color: ${props => props.theme.colors.black};
   text-align: center;
   padding-top: 250px;
+  > div {
+    max-width: 1111px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  @media (min-width: ${props => props.theme.size.tablet}) {
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid ${props => props.theme.colors.darkGrey};
+      padding-bottom: ${props => props.theme.spacingUtils.extraSmall};
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      align-items: bottom;
+      > div:nth-of-type(1) {
+        display: flex;
+        > div {
+          margin-right: 75px;
+        }
+      }
+      > div:nth-of-type(2) > div {
+        display: flex;
+        align-items: bottom;
+      }
+    }
+  }
 `;
 
 export const Logo = styled.div`
@@ -89,6 +116,9 @@ export const Logo = styled.div`
   height: 25px;
   width: 200px;
   margin: 2.5rem auto;
+  @media (min-width: ${props => props.theme.size.tablet}) {
+    margin: 0;
+  }
 `;
 
 export const FooterLinks = styled.ul`
@@ -102,6 +132,14 @@ export const FooterLinks = styled.ul`
   li {
     margin: 2.5rem 0;
   }
+  @media (min-width: ${props => props.theme.size.tablet}) {
+    border: none;
+    display: flex;
+    margin: 0;
+    li {
+      margin: 0 0 0 2.5rem;
+    }
+  }
 `;
 
 export const LocationContact = styled.div`
@@ -112,16 +150,24 @@ export const LocationContact = styled.div`
   strong {
     font-weight: 600;
   }
+  @media (min-width: ${props => props.theme.size.tablet}) {
+    text-align: left;
+  }
 `;
 
 export const Socials = styled.div`
   text-align: center;
   padding-bottom: ${props => props.theme.spacingUtils.normal};
+  @media (min-width: ${props => props.theme.size.tablet}) {
+    padding-bottom: 0;
+    margin-top: 86px;
+  }
 `;
 
 export const SocialIcon = styled.img`
   background-image: url(${props => props.image});
   margin: 0 0.5rem;
+
   &:hover {
     cursor: pointer;
   }
