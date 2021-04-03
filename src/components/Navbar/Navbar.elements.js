@@ -9,9 +9,12 @@ export const Container = styled.div`
   padding-bottom: ${props => props.theme.spacingUtils.normal};
   z-index: 100;
   padding-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  /* margin: 4rem 2.625rem 0 2.625rem; */
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   @media (max-width: ${props => props.theme.size.mobileXL}) {
     height: 85px;
     padding: 0 1.5rem;
@@ -35,7 +38,7 @@ export const NavLinks = styled.ul`
     }
     a {
       text-decoration: none;
-      color: ${props => props.theme.colors.black};
+      color: ${props => props.theme.colors.darkGrey};
       &:hover {
         border-bottom: 1px solid #cccbcc;
       }

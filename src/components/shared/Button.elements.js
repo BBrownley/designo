@@ -1,18 +1,19 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const handleColorType = color => {
   switch (color) {
     case "white":
-      return `
+      return css`
         background-color: white;
-        color: ${props => props.theme.colors.orange};
+        color: ${props => props.theme.colors.black};
         &:hover {
           color: white;
+          background-color: ${props => props.theme.colors.lightPeach}
         }
       `;
     default:
-      return `
-        background-color: ${props => props.theme.colors.orange};
+      return css`
+        background-color: ${props => props.theme.colors.peach};
         color: white;
       `;
   }
@@ -30,7 +31,7 @@ export const Button = styled.button`
   position: relative;
   z-index: 10;
   &:hover {
-    background-color: ${props => props.theme.colors.orangeLight};
+    background-color: ${props => props.theme.colors.peachLight};
     cursor: pointer;
   }
   ${({ color }) => handleColorType(color)};

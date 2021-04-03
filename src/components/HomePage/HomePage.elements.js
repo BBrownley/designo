@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components";
-import {Container} from "../shared/Container.elements";
+import { Container } from "../shared/Container.elements";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
 
 export const HeroContainer = styled(Container)`
   @media (max-width: ${props => props.theme.size.tablet}) {
     padding: 0;
   }
-`
+`;
 
 export const Hero = styled.div`
-  background-color: ${props => props.theme.colors.orange};
+  background-color: ${props => props.theme.colors.peach};
   color: white;
   height: 640px;
   border-radius: 0.5rem;
@@ -19,7 +19,7 @@ export const Hero = styled.div`
   justify-content: space-between;
   font-size: 1rem;
   line-height: 26px;
-  
+
   .hero-bg {
     position: absolute;
     z-index: -1;
@@ -211,7 +211,7 @@ export const ProjectDescription = styled.div`
     letter-spacing: 5px;
   }
   .chevron-right {
-    color: ${props => props.theme.colors.orange};
+    color: ${props => props.theme.colors.peach};
     margin-left: 0.25rem;
   }
 `;
@@ -236,7 +236,6 @@ export const Attributes = styled.div`
       display: none;
     }
   }
-  
 `;
 
 export const Attribute = styled.div`

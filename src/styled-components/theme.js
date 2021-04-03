@@ -1,7 +1,10 @@
 export const colors = {
-  black: "#333136",
-  orange: "#E7816B",
-  orangeLight: "#FFAD9B"
+  black: "#1D1C1E",
+  darkGrey: "#333136",
+  peach: "#E7816B",
+  lightPeach: "#FFAD9B",
+  white: "#FFFFFF",
+  lightGrey: "#F1F3F5"
 };
 
 export const spacingUtils = {

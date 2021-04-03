@@ -14,6 +14,7 @@ import bgCircle from "../../assets/shared/desktop/bg-pattern-small-circle.svg";
 import bgLeaf from "../../assets/shared/desktop/bg-pattern-leaf.svg";
 
 import { Container } from "../shared/Container.elements";
+import Footer from "../Footer/Footer";
 
 import {
   Hero,
@@ -145,6 +146,7 @@ export default function HomePage() {
           </Attribute>
         </Attributes>
       </Container>
+      <Footer/>
     </div>
   );
 }
