@@ -8,6 +8,10 @@ export const Container = styled.div`
   align-items: center;
   padding-bottom: ${props => props.theme.spacingUtils.normal};
   z-index: 100;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* margin: 4rem 2.625rem 0 2.625rem; */
   @media (max-width: ${props => props.theme.size.mobileXL}) {
     height: 85px;
     padding: 0 1.5rem;

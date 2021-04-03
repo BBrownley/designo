@@ -1,5 +1,12 @@
 import styled, { css } from "styled-components";
+import {Container} from "../shared/Container.elements";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
+
+export const HeroContainer = styled(Container)`
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    padding: 0;
+  }
+`
 
 export const Hero = styled.div`
   background-color: ${props => props.theme.colors.orange};
@@ -12,6 +19,7 @@ export const Hero = styled.div`
   justify-content: space-between;
   font-size: 1rem;
   line-height: 26px;
+  
   .hero-bg {
     position: absolute;
     z-index: -1;
@@ -221,12 +229,32 @@ export const Attributes = styled.div`
     z-index: -100;
     transform: rotate(180deg);
   }
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    flex-direction: column;
+    padding: 0 2.25rem;
+    .bg-leaf {
+      display: none;
+    }
+  }
+  
 `;
 
 export const Attribute = styled.div`
   text-align: center;
   line-height: 26px;
   width: 30%;
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 675px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const AttributeImage = styled.div`
@@ -247,6 +275,9 @@ export const AttributeImage = styled.div`
   #bg-circle-3 {
     transform: rotate(90deg);
   }
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    margin: 0;
+  }
 `;
 
 export const AttributeDesc = styled.div`
@@ -255,5 +286,13 @@ export const AttributeDesc = styled.div`
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-bottom: 2.5rem;
+  }
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    flex: 1;
+    margin-left: 4rem;
+  }
+  @media (max-width: 675px) {
+    margin-left: 0;
+    margin-top: 4rem;
   }
 `;
