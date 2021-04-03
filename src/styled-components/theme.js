@@ -4,7 +4,8 @@ export const colors = {
   peach: "#E7816B",
   lightPeach: "#FFAD9B",
   white: "#FFFFFF",
-  lightGrey: "#F1F3F5"
+  lightGrey: "#F1F3F5",
+  grey: "#8F8E8F"
 };
 
 export const spacingUtils = {
