@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import heroBg from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 
 import webDesignSm from "../../assets/home/desktop/image-web-design-small.jpg";
@@ -34,6 +36,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function HomePage() {
+  const history = useHistory();
+
+  const setLink = url => {
+    history.push(url);
+  };
+
   return (
     <div>
       <div>
@@ -59,7 +67,11 @@ export default function HomePage() {
         <Container>
           <ProjectCategories>
             <div>
-              <CategoryImage imageLg={webDesignLg} imageSm={webDesignSm}>
+              <CategoryImage
+                imageLg={webDesignLg}
+                imageSm={webDesignSm}
+                onClick={() => setLink("/web-design")}
+              >
                 <ProjectDescription>
                   <h2>Web design</h2>
                   <a>
@@ -73,7 +85,10 @@ export default function HomePage() {
               </CategoryImage>
             </div>
             <div>
-              <CategoryImage imageLg={appDesignLg}>
+              <CategoryImage
+                imageLg={appDesignLg}
+                onClick={() => setLink("/app-design")}
+              >
                 <ProjectDescription>
                   <h2>App design</h2>
                   <a>
@@ -85,7 +100,10 @@ export default function HomePage() {
                   </a>
                 </ProjectDescription>
               </CategoryImage>
-              <CategoryImage imageLg={graphicDesignLg}>
+              <CategoryImage
+                imageLg={graphicDesignLg}
+                onClick={() => setLink("/graphic-design")}
+              >
                 <ProjectDescription>
                   <h2>Graphic design</h2>
                   <a>

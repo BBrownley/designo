@@ -37,8 +37,8 @@ export default function Footer() {
         <div>
           <Button color={"white"}>Get in touch</Button>
         </div>
-        {/* <img src={twoCircles} className="circles two-circles" />
-        <img src={threeCircles} className="circles three-circles" /> */}
+        <img src={twoCircles} className="circles two-circles" />
+        <img src={threeCircles} className="circles three-circles" />
       </FooterTop>
       <FooterBottom>
         <div>
