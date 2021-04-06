@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,14 +14,19 @@ import {
 
 export default function Navbar() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const history = useHistory();
 
   const toggleHamburgerMenu = () => {
     setHamburgerOpen(prevState => !prevState);
   };
 
+  const setLink = url => {
+    history.push(url);
+  };
+
   return (
     <Container>
-      <Branding></Branding>
+      <Branding onClick={() => setLink("/")}></Branding>
       <NavLinks>
         <li>
           <a href="#">Our Company</a>

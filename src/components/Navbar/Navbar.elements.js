@@ -26,6 +26,9 @@ export const Branding = styled.div`
   background-size: cover;
   width: 202px;
   height: 27px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const NavLinks = styled.ul`
