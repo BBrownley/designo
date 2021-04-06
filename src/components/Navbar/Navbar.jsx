@@ -9,7 +9,8 @@ import {
   NavLinks,
   Bars,
   HamburgerMenu,
-  FontAwesomeContainer
+  FontAwesomeContainer,
+  Toggle
 } from "./Navbar.elements";
 
 export default function Navbar() {
@@ -59,6 +60,7 @@ export default function Navbar() {
           <li>
             <a>Contact</a>
           </li>
+          <Toggle onClick={() => toggleHamburgerMenu()} />
         </HamburgerMenu>
       )}
     </Container>

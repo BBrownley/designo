@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const FooterContainer = styled.div`
   margin-top: 17rem;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   color: white;
 
   .circles {

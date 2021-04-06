@@ -67,6 +67,7 @@ export const HamburgerMenu = styled.ul`
   ${props => `bottom: calc(-235px - 2 * ${props.theme.spacingUtils.small});`}
   left: 0;
   right: 0;
+  bottom: -235px;
   z-index: 10000;
   padding-top: ${props => props.theme.spacingUtils.small};
   padding-bottom: ${props => props.theme.spacingUtils.small};
@@ -82,14 +83,14 @@ export const HamburgerMenu = styled.ul`
   @media (min-width: 701px) {
     display: none;
   }
+`;
 
-  &::after {
-    height: 5000px;
-    position: absolute;
-    bottom: -5000px;
-    background-color: rgba(0, 0, 0, 0.25);
-    left: 0;
-    right: 0;
-    content: "";
-  }
+export const Toggle = styled.div`
+  height: 5000px;
+  position: absolute;
+  bottom: -5000px;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  content: "";
 `;

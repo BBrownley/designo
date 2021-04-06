@@ -2,6 +2,11 @@ import styled, { css } from "styled-components";
 import { Container } from "../shared/Container.elements";
 import phone from "../../assets/home/desktop/image-hero-phone.png";
 
+export const HomePageContainer = styled.div`
+  position: relative;
+  z-index: 100;
+`;
+
 export const HeroContainer = styled(Container)`
   @media (max-width: ${props => props.theme.size.tablet}) {
     padding: 0;
@@ -78,14 +83,14 @@ export const Hero = styled.div`
 
 export const HeroPhone = styled.div`
   width: 500px;
-  height: 550px;
+  height: 670px;
   margin-top: -30px;
   margin-right: -100px;
   background-image: url(${phone});
   background-position: center top;
   position: relative;
   @media (max-width: ${props => props.theme.size.laptopM}) {
-    height: 500px;
+    height: 550px;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -99,6 +104,8 @@ export const ProjectCategories = styled.div`
 
   height: 640px;
   text-align: center;
+
+  position: relative;
 
   > div {
     flex: 1;
@@ -196,7 +203,7 @@ export const ProjectDescription = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 100;
+  z-index: 1;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -221,7 +228,7 @@ export const Attributes = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   .bg-leaf {
     position: absolute;
     left: 250px;
