@@ -4,6 +4,7 @@ export const App = styled.div`
   min-height: 100vh;
   font-size: 1rem;
   overflow: hidden;
+  box-sizing: border-box;
   .wrapper {
     max-width: 1111px;
     margin: 0 auto;

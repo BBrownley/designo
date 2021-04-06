@@ -25,7 +25,7 @@ export const FooterContainer = styled.div`
 export const FooterTop = styled.div`
   background-color: ${props => props.theme.colors.peach};
   height: 292px;
-  max-width: 945px;
+  max-width: 1025px;
   border-radius: 15px;
   padding: 0 6.125rem;
   display: flex;
@@ -72,7 +72,7 @@ export const FooterTop = styled.div`
   @media (min-width: 901px) {
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
+    width: 95%;
   }
 `;
 
@@ -81,7 +81,7 @@ export const FooterBottom = styled.div`
   text-align: center;
   padding-top: 250px;
   > div {
-    max-width: 1111px;
+    max-width: 1070px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }

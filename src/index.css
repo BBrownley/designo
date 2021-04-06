@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  box-sizing: border-box;
 }
 ol,
 ul {
@@ -157,4 +158,8 @@ h2 {
   font-size: 3rem;
   line-height: 3rem;
   font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
 }
