@@ -1,6 +1,7 @@
 import React from "react";
 import { CategoryHeader } from "../shared/CategoryHeader.elements";
 import { Container } from "../shared/Container.elements";
+import ProjectList from "../ProjectList/ProjectList";
 
 export default function WebDesignPage() {
   return (
@@ -14,6 +15,7 @@ export default function WebDesignPage() {
           </p>
         </div>
       </CategoryHeader>
+      <ProjectList />
     </Container>
   );
 }
