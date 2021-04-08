@@ -21,6 +21,7 @@ function App() {
             <Route exact path="/web-design" component={WebDesignPage} />
             <Route exact path="/app-design" component={AppDesignPage} />
             <Route exact path="/graphic-design" component={GraphicDesignPage} />
+            <Route exact path="/contact" component={ContactPage} />
           </Switch>
         </div>
         <Footer />

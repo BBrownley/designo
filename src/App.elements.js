@@ -6,7 +6,7 @@ export const App = styled.div`
   overflow: hidden;
   box-sizing: border-box;
   .wrapper {
-    max-width: 1111px;
+    max-width: 1195px;
     margin: 0 auto;
     /* padding-top: 4rem; */
     /* padding: 4rem 2.625rem 0 2.625rem; */

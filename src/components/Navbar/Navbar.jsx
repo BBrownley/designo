@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,13 +30,13 @@ export default function Navbar() {
       <Branding onClick={() => setLink("/")}></Branding>
       <NavLinks>
         <li>
-          <a href="#">Our Company</a>
+          <Link to="/">Our Company</Link>
         </li>
         <li>
-          <a href="#">Locations</a>
+          <Link to="/">Locations</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </NavLinks>
       {!hamburgerOpen && (
