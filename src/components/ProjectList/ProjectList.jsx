@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
 import Project from "../Project/Project";
 
-import {Container} from "./ProjectList.elements";
+import { Container } from "./ProjectList.elements";
 
 export default function ProjectList({projects}) {
   return (
     <Container>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      {projects.map((project, index) => {
+        return <Project project={project} key={index} />;
+      })}
     </Container>
-  )
+  );
 }

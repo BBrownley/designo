@@ -20,10 +20,8 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  padding: 10px;
   background: white;
   box-sizing: border-box;
-
   overflow: auto;
   max-width: 100%;
 `;
@@ -33,6 +31,8 @@ export const ProjectImage = styled.div`
   background-size: cover;
   padding-bottom: 90%;
   width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 `;
 
 export const ProjectDesc = styled.div`

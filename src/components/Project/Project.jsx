@@ -1,5 +1,4 @@
 import React from "react";
-import expressImg from "../../assets/web-design/desktop/image-express.jpg";
 import {
   Container,
   ImageContainer,
@@ -7,15 +6,16 @@ import {
   ProjectDesc
 } from "./Project.elements";
 
-export default function Project() {
+export default function Project({ project }) {
+  console.log(project);
   return (
     <Container>
       <ImageContainer>
-        <ProjectImage image={expressImg}></ProjectImage>
+        <ProjectImage image={project.image}></ProjectImage>
       </ImageContainer>
       <ProjectDesc className="project-desc">
-        <h4>Express</h4>
-        <p>A multi-carrier shipping website for ecommerce businesses</p>
+        <h4>{project.name}</h4>
+        <p>{project.desc}</p>
       </ProjectDesc>
     </Container>
   );

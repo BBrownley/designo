@@ -3,7 +3,10 @@ import { CategoryHeader } from "../shared/CategoryHeader.elements";
 import { Container } from "../shared/Container.elements";
 import ProjectList from "../ProjectList/ProjectList";
 
+import projects from "./webdesignProjects";
+
 export default function WebDesignPage() {
+  console.log(projects);
   return (
     <Container>
       <CategoryHeader>
@@ -15,7 +18,7 @@ export default function WebDesignPage() {
           </p>
         </div>
       </CategoryHeader>
-      <ProjectList />
+      <ProjectList projects={projects} />
     </Container>
   );
 }

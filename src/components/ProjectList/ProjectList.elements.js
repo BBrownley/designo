@@ -5,4 +5,5 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+  margin-top: 5rem;
 `;
