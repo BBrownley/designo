@@ -3,7 +3,7 @@ import Project from "../Project/Project";
 
 import { Container } from "./ProjectList.elements";
 
-export default function ProjectList({projects}) {
+export default function ProjectList({ projects }) {
   return (
     <Container>
       {projects.map((project, index) => {

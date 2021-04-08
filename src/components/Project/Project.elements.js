@@ -17,6 +17,15 @@ export const Container = styled.div`
       }
     }
   }
+  @media (max-width: ${props => props.theme.size.tabletL}) {
+    display: flex;
+    > * {
+      flex: 1;
+    }
+  }
+  @media (max-width: 600px) {
+    display: inline-block;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -33,6 +42,16 @@ export const ProjectImage = styled.div`
   width: 100%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  @media (max-width: ${props => props.theme.size.tabletL}) {
+    border-radius: 0;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  @media (max-width: 600px) {
+    border-radius: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
 `;
 
 export const ProjectDesc = styled.div`
@@ -56,5 +75,17 @@ export const ProjectDesc = styled.div`
   p {
     color: black;
     line-height: 26px;
+  }
+  @media (max-width: ${props => props.theme.size.tabletL}) {
+    height: auto;
+    border-radius: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  @media (max-width: 600px) {
+    height: 160px;
+    border-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
 `;

@@ -6,4 +6,11 @@ export const Container = styled.div`
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   margin-top: 5rem;
+  @media (max-width: ${props => props.theme.size.tabletL}) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    padding: 0 ${props => props.theme.spacingUtils.verySmall};
+  }
 `;
