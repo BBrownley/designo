@@ -3,6 +3,8 @@ import { App as Container } from "./App.elements";
 
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
+import ScrollToTop from "./components/utils/ScrollToTop";
+
 import HomePage from "./components/HomePage/HomePage";
 import WebDesignPage from "./components/WebDesignPage/WebDesignPage";
 import AppDesignPage from "./components/AppDesignPage/AppDesignPage";
@@ -13,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Container>
         <div className="wrapper">
           <Navbar />

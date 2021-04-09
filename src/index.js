@@ -7,9 +7,12 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "styled-components";
 import * as theme from "./styled-components/theme";
 
+
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
+      
       <App />
     </ThemeProvider>
   </React.StrictMode>,
