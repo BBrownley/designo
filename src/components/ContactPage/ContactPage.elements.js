@@ -11,6 +11,13 @@ export const StyledContainer = styled(Container)`
     left: 43px;
     bottom: 0;
   }
+
+  @media (max-width: 980px) {
+    .bg-pattern {
+      top: 0;
+      bottom: auto;
+    }
+  }
 `;
 
 export const ContactWrapper = styled.div`
@@ -20,11 +27,28 @@ export const ContactWrapper = styled.div`
   display: flex;
   padding: 3.5rem 6rem;
   z-index: 100;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   .contact-message {
     align-self: center;
     z-index: 10;
+  }
+
+  @media (max-width: 980px) {
+    flex-direction: column;
+    height: auto;
+    padding: 3.5rem;
+    .contact-message {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media (max-width: ${props => props.theme.size.tablet}) {
+    border-radius: 0;
+  }
+
+  @media (max-width: 620px) {
+    text-align: center;
   }
 `;
 
@@ -37,6 +61,9 @@ export const ContactMessage = styled.div`
   p {
     line-height: 26px;
     margin-top: 2.375rem;
+  }
+  @media (max-width: 980px) {
+    padding-right: 0;
   }
 `;
 
@@ -96,6 +123,20 @@ export const ContactForm = styled.form`
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+
+  @media (max-width: 980px) {
+    width: 100%;
+    textarea {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @media (max-width: 620px) {
+    #submit-button {
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
 `;
 

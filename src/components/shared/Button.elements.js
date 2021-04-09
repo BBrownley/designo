@@ -26,7 +26,6 @@ export const Button = styled.button`
   outline: none;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: 0.25s;
   font-family: "Jost", sans-serif;
   position: relative;
   z-index: 10;
