@@ -12,6 +12,7 @@ export const App = styled.div`
     /* padding: 4rem 2.625rem 0 2.625rem; */
   }
   @media (max-width: ${props => props.theme.size.mobileXL}) {
+    overflow: visible;
     h1,
     h2 {
       font-size: 2rem;

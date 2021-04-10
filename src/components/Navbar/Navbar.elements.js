@@ -18,6 +18,10 @@ export const Container = styled.div`
   @media (max-width: ${props => props.theme.size.mobileXL}) {
     height: 85px;
     padding: 0 1.5rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
   }
 `;
 
@@ -86,9 +90,9 @@ export const HamburgerMenu = styled.ul`
 `;
 
 export const Toggle = styled.div`
-  height: 5000px;
+  height: 200vh;
   position: absolute;
-  bottom: -5000px;
+  bottom: -200vh;
   background-color: rgba(0, 0, 0, 0.5);
   left: 0;
   right: 0;

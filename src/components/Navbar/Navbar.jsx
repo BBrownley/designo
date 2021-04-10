@@ -30,7 +30,7 @@ export default function Navbar() {
       <Branding onClick={() => setLink("/")}></Branding>
       <NavLinks>
         <li>
-          <Link to="/">Our Company</Link>
+          <Link to="/about">Our Company</Link>
         </li>
         <li>
           <Link to="/locations">Locations</Link>
