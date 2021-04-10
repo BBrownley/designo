@@ -3,6 +3,7 @@ export const colors = {
   darkGrey: "#333136",
   peach: "#E7816B",
   lightPeach: "#FFAD9B",
+  veryLightPeach: "#fdf3f0",
   white: "#FFFFFF",
   lightGrey: "#F1F3F5",
   grey: "#8F8E8F"

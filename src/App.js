@@ -9,6 +9,7 @@ import HomePage from "./components/HomePage/HomePage";
 import WebDesignPage from "./components/WebDesignPage/WebDesignPage";
 import AppDesignPage from "./components/AppDesignPage/AppDesignPage";
 import GraphicDesignPage from "./components/GraphicDesignPage/GraphicDesignPage";
+import LocationsPage from "./components/LocationsPage/LocationsPage";
 import ContactPage from "./components/ContactPage/ContactPage";
 import Footer from "./components/Footer/Footer";
 
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/web-design" component={WebDesignPage} />
             <Route exact path="/app-design" component={AppDesignPage} />
             <Route exact path="/graphic-design" component={GraphicDesignPage} />
+            <Route exact path="/locations" component={LocationsPage} />
             <Route exact path="/contact" component={ContactPage} />
           </Switch>
         </div>

@@ -33,7 +33,7 @@ export default function Navbar() {
           <Link to="/">Our Company</Link>
         </li>
         <li>
-          <Link to="/">Locations</Link>
+          <Link to="/locations">Locations</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
