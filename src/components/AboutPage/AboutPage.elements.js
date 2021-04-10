@@ -1,14 +1,36 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { Container } from "../shared/Container.elements";
+
+export const StyledContainer = styled(Container)`
+  .talent,
+  .real-deal {
+    padding-bottom: 58%;
+  }
+  @media (max-width: 1030px) {
+    .talent,
+    .real-deal {
+      padding-bottom: 0;
+    }
+  }
+`;
 
 export const Item = styled.div`
   width: 100%;
   padding-bottom: 43.5%;
-  /* border: 2px dashed; */
   position: relative;
   border-radius: 0.9375rem;
-  @media (max-width: 900px) {
+  @media (max-width: 1030px) {
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 0;
+  }
+  margin-bottom: 7.5rem;
+  & + [className="talent"] {
+    padding-bottom: 60%;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 0;
   }
 `;
 
@@ -30,17 +52,32 @@ export const Caption = styled.div`
   h2 {
     margin-bottom: 1.875rem;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1030px) {
     position: relative;
     width: 100%;
     border-radius: 0;
-    padding: 4.25rem;
+    padding: 2.25rem 4.25rem;
     text-align: center;
   }
+  @media (max-width: 600px) {
+    padding: 2.25rem;
+  }
+
+  ${props => {
+    switch (props.color) {
+      case "light":
+        return css`
+          background-color: ${props => props.theme.colors.veryLightPeach};
+          color: black;
+          h2 {
+            color: ${props => props.theme.colors.peach};
+          }
+        `;
+    }
+  }}
 `;
 
 export const Image = styled.div`
-  border: 2px dashed red;
   flex-basis: 475px;
   position: absolute;
   right: 0;
@@ -51,7 +88,7 @@ export const Image = styled.div`
   background-size: cover;
   border-top-right-radius: 0.9375rem;
   border-bottom-right-radius: 0.9375rem;
-  @media (max-width: 900px) {
+  @media (max-width: 1030px) {
     background: url(${props => props.imageMd});
     position: relative;
     width: 100%;
@@ -65,8 +102,3 @@ export const Image = styled.div`
     padding-bottom: 86.8%;
   }
 `;
-
-/*
-  557
-  241
-*/
