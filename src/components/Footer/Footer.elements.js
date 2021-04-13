@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const FooterContainer = styled.div`
-  margin-top: 17rem;
+  margin-top: 19.5rem;
   position: relative;
   z-index: 1;
   color: white;
@@ -69,8 +69,8 @@ export const FooterTop = styled.div`
   }
   @media (max-width: 900px) {
     height: 380px;
-    left: 2rem;
-    right: 2rem;
+    left: 2.5rem;
+    right: 2.5rem;
     text-align: center;
     flex-direction: column;
     align-items: center;
@@ -94,9 +94,9 @@ export const FooterBottom = styled.div`
   text-align: center;
   padding-top: 12.25rem;
   > div {
-    max-width: 1070px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2.5rem;
   }
   @media (min-width: ${props => props.theme.size.tablet}) {
     .navigation {

@@ -1,12 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 5rem;
   margin-bottom: 7.5rem;
+
   @media (max-width: 940px) {
     flex-direction: column;
+    margin-bottom: 5rem;
+    > div:last-of-type {
+      margin-bottom: 0;
+    }
   }
 `;
 

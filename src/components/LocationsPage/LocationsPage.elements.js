@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { MapContainer } from "react-leaflet";
 
@@ -21,6 +21,23 @@ export const LocationContainer = styled.div`
       border-radius: 0;
     }
   }
+  @media (max-width: 580px) {
+    margin-bottom: 2rem;
+  }
+  ${props => {
+    if (props.index % 2 === 1) {
+      return css`
+        flex-direction: row-reverse;
+        .map-container {
+          margin: 0;
+          margin-right: 2rem;
+          @media (max-width: 1000px) {
+            margin-right: 0;
+          }
+        }
+      `;
+    }
+  }}
 `;
 
 export const Info = styled.div`
@@ -41,14 +58,8 @@ export const Info = styled.div`
   p {
     line-height: 26px;
   }
-  /* > * {
-    border: 2px dashed;
-  } */
   .wrapper {
     flex: 1;
-    /* > * {
-      border: 2px dashed;
-    } */
     > div {
       &:first-of-type {
         margin-right: 5rem;
@@ -66,16 +77,17 @@ export const Info = styled.div`
   }
   @media (max-width: 580px) {
     margin-top: 0;
+
     .wrapper {
       display: flex;
       flex-direction: column;
       text-align: center;
       > div {
-      &:first-of-type {
-        margin-right: 0;
-        margin-bottom: 2.625rem;
+        &:first-of-type {
+          margin-right: 0;
+          margin-bottom: 2.625rem;
+        }
       }
-    }
     }
   }
 `;
@@ -84,7 +96,7 @@ export const StyledMapContainer = styled(MapContainer)`
   flex-basis: 326px;
   margin-left: 2rem;
   height: 100%;
-  position: relative; 
+  position: relative;
   z-index: 10;
   @media (max-width: 1000px) {
     margin-left: 0;

@@ -18,18 +18,22 @@ export default function LocationsPage() {
     <Container>
       {locations.map((location, index) => {
         return (
-          <LocationContainer>
+          <LocationContainer index={index}>
             <Info>
               <div className="wrapper">
                 <h3>{location.country}</h3>
-                
+
                 <div>
-                  <p><strong>{location.building}</strong></p>
+                  <p>
+                    <strong>{location.building}</strong>
+                  </p>
                   <p>{location.address}</p>
                   <p>{location.city}</p>
                 </div>
                 <div>
-                  <p><strong>Contact</strong></p>
+                  <p>
+                    <strong>Contact</strong>
+                  </p>
                   <p>P : {location.phone}</p>
                   <p>M : {location.email}</p>
                 </div>
@@ -40,6 +44,7 @@ export default function LocationsPage() {
               zoom={13}
               scrollWheelZoom={true}
               zoomControl={false}
+              className="map-container"
             >
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

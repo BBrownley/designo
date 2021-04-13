@@ -5,7 +5,7 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 7.5rem;
   @media (max-width: ${props => props.theme.size.tabletL}) {
     display: flex;
     flex-direction: column;

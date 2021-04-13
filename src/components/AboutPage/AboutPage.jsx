@@ -42,6 +42,13 @@ export default function AboutPage() {
         </div>
       </Item>
       <Item className="talent">
+        <div className="image-container">
+          <Image
+            imageLg={talentLg}
+            imageMd={talentMd}
+            imageSm={talentSm}
+          ></Image>
+        </div>
         <Caption color="light">
           <div className="wrapper">
             <h2>World-class talent</h2>
@@ -61,13 +68,6 @@ export default function AboutPage() {
             </p>
           </div>
         </Caption>
-        <div className="image-container">
-          <Image
-            imageLg={talentLg}
-            imageMd={talentMd}
-            imageSm={talentSm}
-          ></Image>
-        </div>
       </Item>
       <LocationsRow />
       <Item className="real-deal">
