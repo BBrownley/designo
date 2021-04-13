@@ -21,13 +21,11 @@ export default function Navbar() {
     setHamburgerOpen(prevState => !prevState);
   };
 
-  const setLink = url => {
-    history.push(url);
-  };
-
   return (
     <Container>
-      <Branding onClick={() => setLink("/")}></Branding>
+      <Link to="/">
+        <Branding></Branding>
+      </Link>
       <NavLinks>
         <li>
           <Link to="/about">Our Company</Link>
@@ -52,13 +50,19 @@ export default function Navbar() {
       {hamburgerOpen && (
         <HamburgerMenu>
           <li>
-            <a>Our Company</a>
+            <Link to="/about" onClick={() => setHamburgerOpen(false)}>
+              Our Company
+            </Link>
           </li>
           <li>
-            <a>Locations</a>
+            <Link to="/locations" onClick={() => setHamburgerOpen(false)}>
+              Locations
+            </Link>
           </li>
           <li>
-            <a>Contact</a>
+            <Link to="/contact" onClick={() => setHamburgerOpen(false)}>
+              Contact
+            </Link>
           </li>
           <Toggle onClick={() => toggleHamburgerMenu()} />
         </HamburgerMenu>

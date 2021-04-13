@@ -84,6 +84,11 @@ export const HamburgerMenu = styled.ul`
   flex-direction: column;
   justify-content: space-between;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   @media (min-width: 701px) {
     display: none;
   }

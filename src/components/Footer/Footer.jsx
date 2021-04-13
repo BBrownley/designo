@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouteMatch } from "react-router-dom";
+import { useRouteMatch, Link } from "react-router-dom";
 
 import threeCircles from "../../assets/shared/desktop/bg-pattern-three-circles.svg";
 import twoCircles from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
@@ -48,9 +48,15 @@ export default function Footer() {
           <div className="navigation">
             <Logo image={logoLight}></Logo>
             <FooterLinks>
-              <li>Our company</li>
-              <li>Locations</li>
-              <li>Contact</li>
+              <li>
+                <Link to="/about">Our company</Link>
+              </li>
+              <li>
+                <Link to="/locations">Locations</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </FooterLinks>
           </div>
           <div className="info">

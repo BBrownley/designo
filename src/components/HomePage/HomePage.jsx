@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 import heroBg from "../../assets/home/desktop/bg-pattern-hero-home.svg";
 
@@ -59,7 +59,9 @@ export default function HomePage() {
                 creating fully responsive websites, app design, and engaging
                 brand experiences. Find out more about our services.
               </p>
-              <Button color={"white"}>Learn more</Button>
+              <Button color={"white"}>
+                <Link to="/about">Learn more</Link>
+              </Button>
             </div>
             <div>
               <HeroPhone></HeroPhone>
@@ -70,54 +72,64 @@ export default function HomePage() {
         <Container>
           <ProjectCategories>
             <div>
-              <CategoryImage
-                imageLg={webDesignLg}
-                imageSm={webDesignSm}
-                onClick={() => setLink("/web-design")}
-              >
-                <CategoryDescription>
-                  <h2>Web design</h2>
-                  <a>
-                    View projects{" "}
-                    <FontAwesomeIcon
-                      icon={faChevronRight}
-                      className="chevron-right"
-                    ></FontAwesomeIcon>
-                  </a>
-                </CategoryDescription>
-              </CategoryImage>
+              <Link to="/web-design">
+                <CategoryImage
+                  imageLg={webDesignLg}
+                  imageSm={webDesignSm}
+                  onClick={() => setLink("/web-design")}
+                >
+                  <CategoryDescription>
+                    <h2>Web design</h2>
+                    <a>
+                      View projects{" "}
+                      <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="chevron-right"
+                      ></FontAwesomeIcon>
+                    </a>
+                  </CategoryDescription>
+                </CategoryImage>
+              </Link>
             </div>
             <div>
-              <CategoryImage
-                imageLg={appDesignLg}
-                onClick={() => setLink("/app-design")}
-              >
-                <CategoryDescription>
-                  <h2>App design</h2>
-                  <a>
-                    View projects{" "}
-                    <FontAwesomeIcon
-                      icon={faChevronRight}
-                      className="chevron-right"
-                    ></FontAwesomeIcon>
-                  </a>
-                </CategoryDescription>
-              </CategoryImage>
-              <CategoryImage
-                imageLg={graphicDesignLg}
-                onClick={() => setLink("/graphic-design")}
-              >
-                <CategoryDescription>
-                  <h2>Graphic design</h2>
-                  <a>
-                    View projects{" "}
-                    <FontAwesomeIcon
-                      icon={faChevronRight}
-                      className="chevron-right"
-                    ></FontAwesomeIcon>
-                  </a>
-                </CategoryDescription>
-              </CategoryImage>
+              <div>
+                <Link to="/app-design">
+                  <CategoryImage
+                    imageLg={appDesignLg}
+                    onClick={() => setLink("/app-design")}
+                  >
+                    <CategoryDescription>
+                      <h2>App design</h2>
+                      <a>
+                        View projects{" "}
+                        <FontAwesomeIcon
+                          icon={faChevronRight}
+                          className="chevron-right"
+                        ></FontAwesomeIcon>
+                      </a>
+                    </CategoryDescription>
+                  </CategoryImage>
+                </Link>
+              </div>
+              <div>
+                <Link to="/graphic-design">
+                  <CategoryImage
+                    imageLg={graphicDesignLg}
+                    onClick={() => setLink("/graphic-design")}
+                  >
+                    <CategoryDescription>
+                      <h2>Graphic design</h2>
+                      <a>
+                        View projects{" "}
+                        <FontAwesomeIcon
+                          icon={faChevronRight}
+                          className="chevron-right"
+                        ></FontAwesomeIcon>
+                      </a>
+                    </CategoryDescription>
+                  </CategoryImage>
+                </Link>
+              </div>
             </div>
           </ProjectCategories>
         </Container>

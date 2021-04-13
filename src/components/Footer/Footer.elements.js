@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   margin-top: 19.5rem;
@@ -147,6 +148,10 @@ export const FooterLinks = styled.ul`
   margin: 0 1.5rem;
   li {
     margin: 2.5rem 0;
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
   @media (min-width: ${props => props.theme.size.tablet}) {
     border: none;
@@ -186,5 +191,6 @@ export const SocialIcon = styled.img`
 
   &:hover {
     cursor: pointer;
+    filter: brightness(125%);
   }
 `;
