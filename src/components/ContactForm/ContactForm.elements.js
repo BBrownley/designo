@@ -4,6 +4,7 @@ import { Container } from "../shared/Container.elements";
 export const StyledContainer = styled(Container)`
   position: relative;
   padding: 0;
+  margin-bottom: 10rem;
 
   overflow: hidden;
   .bg-pattern {

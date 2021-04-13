@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouteMatch } from "react-router-dom";
 
 import threeCircles from "../../assets/shared/desktop/bg-pattern-three-circles.svg";
 import twoCircles from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
@@ -24,9 +25,11 @@ import {
 import { Button } from "../shared/Button.elements";
 
 export default function Footer() {
+  const match = useRouteMatch("/contact");
+
   return (
-    <FooterContainer>
-      <FooterTop>
+    <FooterContainer displayUpper={!match}>
+      <FooterTop className="footer-top">
         <div>
           <h2>Let's talk about your project</h2>
           <p>
@@ -40,7 +43,7 @@ export default function Footer() {
         <img src={twoCircles} className="circles two-circles" />
         <img src={threeCircles} className="circles three-circles" />
       </FooterTop>
-      <FooterBottom>
+      <FooterBottom className="footer-bottom">
         <div>
           <div className="navigation">
             <Logo image={logoLight}></Logo>
@@ -71,15 +74,14 @@ export default function Footer() {
                 </strong>
               </LocationContact>
             </div>
-         
-              <Socials>
-                <SocialIcon src={iconFb} />
-                <SocialIcon src={iconYoutube} />
-                <SocialIcon src={iconTwitter} />
-                <SocialIcon src={iconPinterest} />
-                <SocialIcon src={iconInstagram} />
-              </Socials>
-            
+
+            <Socials>
+              <SocialIcon src={iconFb} />
+              <SocialIcon src={iconYoutube} />
+              <SocialIcon src={iconTwitter} />
+              <SocialIcon src={iconPinterest} />
+              <SocialIcon src={iconInstagram} />
+            </Socials>
           </div>
         </div>
       </FooterBottom>

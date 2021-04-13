@@ -1,5 +1,7 @@
 import React from "react";
 
+import LocationsRow from "../LocationsRow/LocationsRow";
+
 import heroLg from "../../assets/about/desktop/image-about-hero.jpg";
 import heroMd from "../../assets/about/tablet/image-about-hero.jpg";
 import heroSm from "../../assets/about/mobile/image-about-hero.jpg";
@@ -67,6 +69,7 @@ export default function AboutPage() {
           ></Image>
         </div>
       </Item>
+      <LocationsRow />
       <Item className="real-deal">
         <Caption color="light">
           <div className="wrapper">
@@ -88,11 +91,7 @@ export default function AboutPage() {
           </div>
         </Caption>
         <div className="image-container">
-          <Image
-            imageLg={realLg}
-            imageMd={realMd}
-            imageSm={realSm}
-          ></Image>
+          <Image imageLg={realLg} imageMd={realMd} imageSm={realSm}></Image>
         </div>
       </Item>
     </Container>

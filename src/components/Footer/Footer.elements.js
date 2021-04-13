@@ -20,6 +20,19 @@ export const FooterContainer = styled.div`
     right: 294px;
     transform: rotate(270deg);
   }
+  ${props => {
+    if (props.displayUpper === false) {
+      return css`
+        margin-top: 10rem;
+        .footer-top {
+          display: none;
+        }
+        .footer-bottom {
+          padding-top: 4.75rem;
+        }
+      `;
+    }
+  }}
 `;
 
 export const FooterTop = styled.div`
