@@ -92,7 +92,7 @@ export const FooterTop = styled.div`
 export const FooterBottom = styled.div`
   background-color: ${props => props.theme.colors.black};
   text-align: center;
-  padding-top: 250px;
+  padding-top: 12.25rem;
   > div {
     max-width: 1070px;
     margin: 0 auto;
@@ -120,6 +120,9 @@ export const FooterBottom = styled.div`
         align-items: bottom;
       }
     }
+  }
+  @media (max-width: 900px) {
+    padding-top: 17rem;
   }
 `;
 

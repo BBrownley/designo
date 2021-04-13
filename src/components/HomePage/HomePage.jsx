@@ -23,13 +23,16 @@ import {
   HeroContainer,
   HeroPhone,
   ProjectCategories,
-  ProjectDescription,
-  CategoryImage,
   Attributes,
   Attribute,
   AttributeImage,
   AttributeDesc
 } from "./HomePage.elements";
+
+import {
+  CategoryImage,
+  CategoryDescription
+} from "../shared/CategoryItem.elements";
 import { Button } from "../shared/Button.elements";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -72,7 +75,7 @@ export default function HomePage() {
                 imageSm={webDesignSm}
                 onClick={() => setLink("/web-design")}
               >
-                <ProjectDescription>
+                <CategoryDescription>
                   <h2>Web design</h2>
                   <a>
                     View projects{" "}
@@ -81,7 +84,7 @@ export default function HomePage() {
                       className="chevron-right"
                     ></FontAwesomeIcon>
                   </a>
-                </ProjectDescription>
+                </CategoryDescription>
               </CategoryImage>
             </div>
             <div>
@@ -89,7 +92,7 @@ export default function HomePage() {
                 imageLg={appDesignLg}
                 onClick={() => setLink("/app-design")}
               >
-                <ProjectDescription>
+                <CategoryDescription>
                   <h2>App design</h2>
                   <a>
                     View projects{" "}
@@ -98,13 +101,13 @@ export default function HomePage() {
                       className="chevron-right"
                     ></FontAwesomeIcon>
                   </a>
-                </ProjectDescription>
+                </CategoryDescription>
               </CategoryImage>
               <CategoryImage
                 imageLg={graphicDesignLg}
                 onClick={() => setLink("/graphic-design")}
               >
-                <ProjectDescription>
+                <CategoryDescription>
                   <h2>Graphic design</h2>
                   <a>
                     View projects{" "}
@@ -113,7 +116,7 @@ export default function HomePage() {
                       className="chevron-right"
                     ></FontAwesomeIcon>
                   </a>
-                </ProjectDescription>
+                </CategoryDescription>
               </CategoryImage>
             </div>
           </ProjectCategories>
