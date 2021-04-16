@@ -50,44 +50,57 @@ export default function ContactForm() {
       }
     });
 
-    console.log(changedField);
+    if (changedField === undefined) return;
+
+    const inputLength = formData[changedField].value.trim().length;
+    console.log(inputLength);
+
+    setFormData(prevState => {
+      return {
+        ...prevState,
+        [changedField]: {
+          ...prevState[changedField],
+          error: inputLength === 0 ? "Cannot be empty" : null
+        }
+      };
+    });
 
     if (changedField === "email") {
       // Validate email
       const mailformat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       const emailValid = formData["email"].value.match(mailformat);
 
-      if (!emailValid === true) {
-        console.log("Invalid email!");
-      } else {
-        console.log("Valid email");
-      }
-    }
-
-    return;
-
-    const updatedStateAsArray = Object.keys(formData)
-      .map(key => formData[key])
-      .map(formField => {
-        return formField;
-        console.log(formField);
-
-        if (formField.value.trim().length > 0) {
-          return {
-            value: formField.value,
-            error: null,
-            fieldName: formField.fieldName
-          };
-        } else {
-          return {
-            value: formField.value,
-            error: "Cannot be empty",
-            fieldName: formField.fieldName
-          };
-        }
+      setFormData(prevState => {
+        return {
+          ...prevState,
+          email: {
+            ...prevState.email,
+            error: !emailValid ? "Invalid email address" : null
+          }
+        };
       });
 
-    console.log(updatedStateAsArray);
+      return;
+    }
+
+    if (changedField === "phoneNumber") {
+      // Validate phone number
+
+      const phoneFormat = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+      const phoneValid = formData["phoneNumber"].value.match(phoneFormat);
+
+      setFormData(prevState => {
+        return {
+          ...prevState,
+          phoneNumber: {
+            ...prevState.phoneNumber,
+            error: !phoneValid ? "Invalid phone number" : null
+          }
+        };
+      });
+
+      return;
+    }
   };
 
   useLayoutEffect(() => {
