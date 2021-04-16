@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import canadaImg from "../../assets/shared/desktop/illustration-canada.svg";
 import australiaImg from "../../assets/shared/desktop/illustration-australia.svg";
@@ -16,19 +17,25 @@ export default function LocationsRow() {
         <img src={bgCircle} className="bg-circle" />
         <img src={canadaImg} alt="Canada" />
         <h4>Canada</h4>
-        <Button>See location</Button>
+        <Button>
+          <Link to="/locations">See location</Link>
+        </Button>
       </Location>
       <Location>
         <img src={bgCircle} className="bg-circle" />
         <img src={australiaImg} alt="Australia" />
         <h4>Australia</h4>
-        <Button>See location</Button>
+        <Link to="/locations">
+          <Button>See location</Button>
+        </Link>
       </Location>
       <Location>
         <img src={bgCircle} className="bg-circle" />
         <img src={ukImg} alt="United Kingdom" />
         <h4>United Kingdom</h4>
-        <Button>See location</Button>
+        <Link to="/locations">
+          <Button>See location</Button>
+        </Link>
       </Location>
     </Container>
   );

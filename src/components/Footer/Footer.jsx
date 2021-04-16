@@ -38,7 +38,9 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <Button color={"white"}>Get in touch</Button>
+          <Button color={"white"}>
+            <Link to="/contact">Get in touch</Link>
+          </Button>
         </div>
         <img src={twoCircles} className="circles two-circles" />
         <img src={threeCircles} className="circles three-circles" />
@@ -46,7 +48,9 @@ export default function Footer() {
       <FooterBottom className="footer-bottom">
         <div>
           <div className="navigation">
-            <Logo image={logoLight}></Logo>
+            <Link to="/">
+              <Logo image={logoLight}></Logo>
+            </Link>
             <FooterLinks>
               <li>
                 <Link to="/about">Our company</Link>
