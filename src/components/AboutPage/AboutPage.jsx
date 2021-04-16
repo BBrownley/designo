@@ -49,7 +49,7 @@ export default function AboutPage() {
             imageSm={talentSm}
           ></Image>
         </div>
-        <Caption color="light">
+        <Caption color="light" className="caption">
           <div className="wrapper">
             <h2>World-class talent</h2>
             <p>

@@ -26,8 +26,28 @@ export const Item = styled.div`
     padding-bottom: 0;
   }
   margin-bottom: 7.5rem;
-  & + [className="talent"] {
+  &[class*="talent"] {
     padding-bottom: 60%;
+    .image-container div {
+      left: 0;
+      border-radius: 0;
+      border-bottom-left-radius: 0.9375rem;
+      border-top-left-radius: 0.9375rem;
+    }
+    .caption {
+      right: 0;
+      left: auto;
+      border-radius: 0;
+      border-bottom-right-radius: 0.9375rem;
+      border-top-right-radius: 0.9375rem;
+    }
+    @media (max-width: 1030px) {
+      flex-direction: column;
+      .image-container div,
+      .caption {
+        border-radius: 0;
+      }
+    }
   }
   @media (max-width: 600px) {
     margin-bottom: 0;
