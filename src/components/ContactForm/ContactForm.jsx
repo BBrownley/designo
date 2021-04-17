@@ -10,32 +10,37 @@ import {
   ContactWrapper,
   ContactMessage,
   MainForm,
-  ContactForm as FormContainer
+  ContactForm as FormContainer,
+  FormBottom
 } from "./ContactForm.elements";
 
+const defaultFormData = {
+  name: {
+    value: "",
+    error: null,
+    fieldName: "name"
+  },
+  email: {
+    value: "",
+    error: null,
+    fieldName: "email"
+  },
+  phoneNumber: {
+    value: "",
+    error: null,
+    fieldName: "phoneNumber"
+  },
+  message: {
+    value: "",
+    error: null,
+    fieldName: "message"
+  }
+};
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: {
-      value: "",
-      error: null,
-      fieldName: "name"
-    },
-    email: {
-      value: "",
-      error: null,
-      fieldName: "email"
-    },
-    phoneNumber: {
-      value: "",
-      error: null,
-      fieldName: "phoneNumber"
-    },
-    message: {
-      value: "",
-      error: null,
-      fieldName: "message"
-    }
-  });
+  const [formData, setFormData] = useState(defaultFormData);
+
+  const [formMessage, setFormMessage] = useState("");
 
   const firstUpdate = useRef(true);
   const prevFormData = usePrevious(formData);
@@ -109,7 +114,9 @@ export default function ContactForm() {
       return;
     }
 
-    validateForm();
+    if (formMessage !== "Form 'submitted'") {
+      validateForm();
+    }
   });
 
   const handleSetValue = e => {
@@ -124,6 +131,35 @@ export default function ContactForm() {
         }
       };
     });
+  };
+
+  const handleSubmitForm = async () => {
+    // Check for any errors
+
+    let formError = "";
+
+    Object.values(formData).forEach(field => {
+      if (field.error !== null) {
+        formError = "Form still has errors";
+        return;
+      } else if (formData[field.fieldName].value.trim().length === 0) {
+        formError = "Please fill out all fields";
+      }
+    });
+    if (!formError) {
+      setFormMessage("Form 'submitted'");
+      setFormData(defaultFormData);
+      await new Promise(resolve => {
+        setTimeout(resolve, 3000);
+      });
+      setFormMessage("");
+    } else {
+      setFormMessage(formError);
+      await new Promise(resolve => {
+        setTimeout(resolve, 3000);
+      });
+      setFormMessage("");
+    }
   };
 
   return (
@@ -149,6 +185,7 @@ export default function ContactForm() {
                 placeholder="Name"
                 value={formData.name.value}
                 onChange={handleSetValue}
+                style={{ paddingRight: formData.name.error ? "200px" : 0 }}
               ></input>
               {formData.name.error && (
                 <span className="form-error">
@@ -165,6 +202,7 @@ export default function ContactForm() {
                 placeholder="Email Address"
                 value={formData.email.value}
                 onChange={handleSetValue}
+                style={{ paddingRight: formData.email.error ? "200px" : 0 }}
               ></input>
               {formData.email.error && (
                 <span className="form-error">
@@ -181,6 +219,9 @@ export default function ContactForm() {
                 placeholder="Phone"
                 value={formData.phoneNumber.value}
                 onChange={handleSetValue}
+                style={{
+                  paddingRight: formData.phoneNumber.error ? "200px" : 0
+                }}
               ></input>
               {formData.phoneNumber.error && (
                 <span className="form-error">
@@ -197,6 +238,7 @@ export default function ContactForm() {
               placeholder="Your Message"
               value={formData.message.value}
               onChange={handleSetValue}
+              style={{ paddingRight: formData.message.error ? "200px" : 0 }}
             ></textarea>
             {formData.message.error && (
               <span className="form-error">
@@ -205,15 +247,19 @@ export default function ContactForm() {
               </span>
             )}
           </div>
-          <Button
-            type="submit"
-            form="contactform"
-            value="Submit"
-            color="white"
-            id="submit-button"
-          >
-            Submit
-          </Button>
+          <FormBottom>
+            <span className="form-message">{formMessage}</span>
+            <Button
+              type="submit"
+              form="contactform"
+              value="Submit"
+              color="white"
+              id="submit-button"
+              onClick={handleSubmitForm}
+            >
+              Submit
+            </Button>
+          </FormBottom>
         </FormContainer>
       </ContactWrapper>
     </Container>

@@ -2,6 +2,24 @@ import styled from "styled-components";
 import { Container } from "../shared/Container.elements";
 
 export const StyledContainer = styled(Container)`
+  @keyframes example {
+    0% {
+      margin-right: 0;
+    }
+    25% {
+      margin-right: 10px;
+    }
+    25% {
+      margin-right: 2px;
+    }
+    25% {
+      margin-right: 8px;
+    }
+    100% {
+      margin-right: 0px;
+    }
+  }
+
   position: relative;
   padding: 0;
   margin-bottom: 10rem;
@@ -27,6 +45,8 @@ export const StyledContainer = styled(Container)`
       right: 0;
       top: 0;
       font-style: italic;
+      animation-name: example;
+      animation-duration: 0.25s;
       img {
         margin-right: 0.5rem;
       }
@@ -147,7 +167,6 @@ export const ContactForm = styled.form`
   #submit-button {
     float: right;
     width: 150px;
-    position: absolute;
     bottom: 0;
     right: 0;
   }
@@ -159,15 +178,32 @@ export const ContactForm = styled.form`
     }
   }
 
-  @media (max-width: 620px) {
+  /* @media (max-width: 620px) {
     #submit-button {
       right: 50%;
       transform: translateX(50%);
     }
-  }
+  } */
 `;
 
 export const MainForm = styled.form`
   display: flex;
   flex-direction: column;
+`;
+
+export const FormBottom = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  .form-message {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  @media (max-width: 400px) {
+    flex-direction: column;
+    .form-message {
+      margin-bottom: .5rem;
+    }
+  }
 `;
