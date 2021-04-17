@@ -193,4 +193,8 @@ export const SocialIcon = styled.img`
     cursor: pointer;
     filter: brightness(125%);
   }
+
+  @media (max-width: 815px) {
+    margin: .75rem;
+  }
 `;

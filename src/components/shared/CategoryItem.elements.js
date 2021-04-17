@@ -29,6 +29,10 @@ export const CategoryImage = styled.div`
     right: 0;
     transition: 0.25s opacity ease;
   }
+  @media (max-width: 900px) {
+    background-position: center;
+    background-size: cover;
+  }
   @media (max-width: ${props => props.theme.size.tablet}) {
     background-position: center;
     background-size: cover;
