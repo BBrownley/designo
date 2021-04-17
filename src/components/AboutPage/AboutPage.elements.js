@@ -43,6 +43,7 @@ export const Item = styled.div`
     }
     @media (max-width: 1030px) {
       flex-direction: column;
+      padding-bottom: 0;
       .image-container div,
       .caption {
         border-radius: 0;
