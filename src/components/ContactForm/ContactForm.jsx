@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import usePrevious from "./usePrevious";
 
 import bgPattern from "../../assets/contact/desktop/bg-pattern-hero-desktop.svg";
+import errorIcon from "../../assets/contact/desktop/icon-error.svg";
 
 import { Button } from "../shared/Button.elements";
 import {
@@ -39,7 +40,7 @@ export default function ContactForm() {
   const firstUpdate = useRef(true);
   const prevFormData = usePrevious(formData);
 
-  const validateEmpty = () => {
+  const validateForm = () => {
     // Determine the field that changed
 
     let changedField;
@@ -53,7 +54,6 @@ export default function ContactForm() {
     if (changedField === undefined) return;
 
     const inputLength = formData[changedField].value.trim().length;
-    console.log(inputLength);
 
     setFormData(prevState => {
       return {
@@ -109,7 +109,7 @@ export default function ContactForm() {
       return;
     }
 
-    validateEmpty();
+    validateForm();
   });
 
   const handleSetValue = e => {
@@ -141,42 +141,70 @@ export default function ContactForm() {
         </ContactMessage>
         <FormContainer>
           <MainForm>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              value={formData.name.value}
-              onChange={handleSetValue}
-            ></input>
-            {formData.name.error}
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email.value}
-              onChange={handleSetValue}
-            ></input>
-            {formData.email.error}
-            <input
-              type="phoneNumber"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="Phone"
-              value={formData.phoneNumber.value}
-              onChange={handleSetValue}
-            ></input>
-            {formData.phoneNumber.error}
+            <div className="input-container">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                value={formData.name.value}
+                onChange={handleSetValue}
+              ></input>
+              {formData.name.error && (
+                <span className="form-error">
+                  <img src={errorIcon} draggable={false} />
+                  {formData.name.error}
+                </span>
+              )}
+            </div>
+            <div className="input-container">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email.value}
+                onChange={handleSetValue}
+              ></input>
+              {formData.email.error && (
+                <span className="form-error">
+                  <img src={errorIcon} draggable={false} />
+                  {formData.email.error}
+                </span>
+              )}
+            </div>
+            <div className="input-container">
+              <input
+                type="phoneNumber"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Phone"
+                value={formData.phoneNumber.value}
+                onChange={handleSetValue}
+              ></input>
+              {formData.phoneNumber.error && (
+                <span className="form-error">
+                  <img src={errorIcon} draggable={false} />
+                  {formData.phoneNumber.error}
+                </span>
+              )}
+            </div>
           </MainForm>
-          <textarea
-            name="message"
-            form="contactform"
-            placeholder="Your Message"
-            value={formData.message.value}
-            onChange={handleSetValue}
-          ></textarea>
-          {formData.message.error}
+          <div className="input-container">
+            <textarea
+              name="message"
+              form="contactform"
+              placeholder="Your Message"
+              value={formData.message.value}
+              onChange={handleSetValue}
+            ></textarea>
+            {formData.message.error && (
+              <span className="form-error">
+                <img src={errorIcon} draggable={false} />
+                {formData.message.error}
+              </span>
+            )}
+          </div>
           <Button
             type="submit"
             form="contactform"

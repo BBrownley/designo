@@ -14,6 +14,29 @@ export const StyledContainer = styled(Container)`
     bottom: 0;
   }
 
+  .input-container {
+    margin-top: 1rem;
+    position: relative;
+    input {
+      width: 100%;
+    }
+    .form-error {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: 0;
+      top: 0;
+      font-style: italic;
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+
+    textarea {
+      margin-top: 0;
+    }
+  }
+
   @media (max-width: 980px) {
     .bg-pattern {
       top: 0;
@@ -113,7 +136,9 @@ export const ContactForm = styled.form`
 
   textarea {
     width: 100%;
-    height: 125px;
+    height: 100px;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   position: relative;
