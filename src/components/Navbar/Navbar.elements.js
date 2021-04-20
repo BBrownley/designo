@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import brandingImg from "../../assets/shared/desktop/logo-dark.png";
 
 export const Container = styled.div`
@@ -11,6 +11,13 @@ export const Container = styled.div`
   padding-top: 4rem;
   padding-left: 2.625rem;
   padding-right: 2.625rem;
+  max-width: 1195px;
+  margin: 0 auto;
+
+  .fa-bars:hover {
+    cursor: pointer;
+  }
+
   @media (max-width: ${props => props.theme.size.tablet}) {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -22,6 +29,9 @@ export const Container = styled.div`
     position: sticky;
     top: 0;
     background-color: white;
+    /* border-bottom: 1px solid gray; */
+    -webkit-box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.1); 
+box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.1);
   }
 `;
 
@@ -37,9 +47,11 @@ export const Branding = styled.div`
 
 export const NavLinks = styled.ul`
   display: flex;
+
   li {
     letter-spacing: 2px;
     text-transform: uppercase;
+
     &:not(:last-child) {
       margin-right: 2.625rem;
     }
@@ -63,6 +75,11 @@ export const FontAwesomeContainer = styled.div`
   }
 `;
 
+export const openMenu = keyframes`
+   0% { opacity: 0; left: -200px}
+ 100% { opacity: 1; left: 0px}
+`;
+
 export const HamburgerMenu = styled.ul`
   background-color: black;
   color: white;
@@ -83,6 +100,8 @@ export const HamburgerMenu = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: 0.25s ${openMenu};
+  user-select: none;
 
   a {
     color: white;
@@ -94,6 +113,11 @@ export const HamburgerMenu = styled.ul`
   }
 `;
 
+const fadeIn = keyframes`
+ 0% { opacity: 0; }
+ 100% { opacity: 1; }
+`;
+
 export const Toggle = styled.div`
   height: 200vh;
   position: absolute;
@@ -102,4 +126,6 @@ export const Toggle = styled.div`
   left: 0;
   right: 0;
   content: "";
+  animation: 0.25s ${fadeIn};
+  transition: 2s;
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +16,8 @@ import {
 export default function Navbar() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const history = useHistory();
+
+  const toggleRef = useRef(null);
 
   const toggleHamburgerMenu = () => {
     setHamburgerOpen(prevState => !prevState);
@@ -38,12 +40,12 @@ export default function Navbar() {
         </li>
       </NavLinks>
       {!hamburgerOpen && (
-        <FontAwesomeContainer>
+        <FontAwesomeContainer className="fa-bars">
           <FontAwesomeIcon icon={faBars} onClick={toggleHamburgerMenu} />
         </FontAwesomeContainer>
       )}
       {hamburgerOpen && (
-        <FontAwesomeContainer>
+        <FontAwesomeContainer className="fa-bars">
           <FontAwesomeIcon icon={faTimes} onClick={toggleHamburgerMenu} />
         </FontAwesomeContainer>
       )}
@@ -64,7 +66,7 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
-          <Toggle onClick={() => toggleHamburgerMenu()} />
+          <Toggle onClick={() => toggleHamburgerMenu()} ref={toggleRef}/>
         </HamburgerMenu>
       )}
     </Container>

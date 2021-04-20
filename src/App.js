@@ -19,8 +19,8 @@ function App() {
     <Router>
       <ScrollToTop />
       <Container>
+        <Navbar />
         <div className="wrapper">
-          <Navbar />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/web-design" component={WebDesignPage} />
