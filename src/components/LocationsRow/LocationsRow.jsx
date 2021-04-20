@@ -14,7 +14,7 @@ export default function LocationsRow() {
   return (
     <Container>
       <Location>
-        <img src={bgCircle} className="bg-circle" />
+        <img src={bgCircle} className="bg-circle" alt="" />
         <img src={canadaImg} alt="Canada" />
         <h4>Canada</h4>
         <Button>
@@ -22,7 +22,7 @@ export default function LocationsRow() {
         </Button>
       </Location>
       <Location>
-        <img src={bgCircle} className="bg-circle" />
+        <img src={bgCircle} className="bg-circle" alt="" />
         <img src={australiaImg} alt="Australia" />
         <h4>Australia</h4>
         <Link to="/locations">
@@ -30,7 +30,7 @@ export default function LocationsRow() {
         </Link>
       </Location>
       <Location>
-        <img src={bgCircle} className="bg-circle" />
+        <img src={bgCircle} className="bg-circle" alt="" />
         <img src={ukImg} alt="United Kingdom" />
         <h4>United Kingdom</h4>
         <Link to="/locations">

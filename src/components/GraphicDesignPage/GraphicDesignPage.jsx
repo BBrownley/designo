@@ -38,13 +38,13 @@ export default function GraphicDesignPage() {
           <CategoryImage imageLg={appDesignLg}>
             <CategoryDescription>
               <h2>App design</h2>
-              <a>
+              <div>
                 View projects{" "}
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className="chevron-right"
                 ></FontAwesomeIcon>
-              </a>
+              </div>
             </CategoryDescription>
           </CategoryImage>
         </Link>
@@ -52,13 +52,13 @@ export default function GraphicDesignPage() {
           <CategoryImage imageLg={webDesignLg} imageSm={webDesignSm}>
             <CategoryDescription>
               <h2>Web design</h2>
-              <a>
+              <div>
                 View projects{" "}
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className="chevron-right"
                 ></FontAwesomeIcon>
-              </a>
+              </div>
             </CategoryDescription>
           </CategoryImage>
         </Link>

@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React from "react";
 
 import locations from "./locationdata";
 
@@ -13,12 +13,11 @@ import {
 } from "./LocationsPage.elements";
 
 export default function LocationsPage() {
-  const mapRef = createRef();
   return (
     <Container>
       {locations.map((location, index) => {
         return (
-          <LocationContainer index={index}>
+          <LocationContainer index={index} key={index}>
             <Info>
               <div className="wrapper">
                 <h3>{location.country}</h3>

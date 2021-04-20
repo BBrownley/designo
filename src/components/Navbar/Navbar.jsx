@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -7,7 +7,6 @@ import {
   Container,
   Branding,
   NavLinks,
-  Bars,
   HamburgerMenu,
   FontAwesomeContainer,
   Toggle
@@ -15,7 +14,6 @@ import {
 
 export default function Navbar() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-  const history = useHistory();
 
   const toggleRef = useRef(null);
 
@@ -66,7 +64,7 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
-          <Toggle onClick={() => toggleHamburgerMenu()} ref={toggleRef}/>
+          <Toggle onClick={() => toggleHamburgerMenu()} ref={toggleRef} />
         </HamburgerMenu>
       )}
     </Container>

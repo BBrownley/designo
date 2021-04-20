@@ -94,6 +94,8 @@ export const Caption = styled.div`
             color: ${props => props.theme.colors.peach};
           }
         `;
+      default:
+        break;
     }
   }}
 `;

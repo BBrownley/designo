@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   margin-top: 19.5rem;

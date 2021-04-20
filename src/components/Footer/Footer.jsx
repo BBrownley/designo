@@ -42,8 +42,8 @@ export default function Footer() {
             <Link to="/contact">Get in touch</Link>
           </Button>
         </div>
-        <img src={twoCircles} className="circles two-circles" />
-        <img src={threeCircles} className="circles three-circles" />
+        <img src={twoCircles} className="circles two-circles" alt="" />
+        <img src={threeCircles} className="circles three-circles" alt="" />
       </FooterTop>
       <FooterBottom className="footer-bottom">
         <div>

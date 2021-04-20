@@ -7,7 +7,6 @@ import {
 } from "./Project.elements";
 
 export default function Project({ project }) {
-  console.log(project);
   return (
     <Container>
       <ImageContainer>

@@ -10,7 +10,7 @@ import {
   ContactWrapper,
   ContactMessage,
   MainForm,
-  ContactForm as FormContainer,
+  FormContainer,
   FormBottom
 } from "./ContactForm.elements";
 
@@ -91,7 +91,7 @@ export default function ContactForm() {
     if (changedField === "phoneNumber") {
       // Validate phone number
 
-      const phoneFormat = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+      const phoneFormat = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
       const phoneValid = formData["phoneNumber"].value.match(phoneFormat);
 
       setFormData(prevState => {
@@ -164,7 +164,7 @@ export default function ContactForm() {
 
   return (
     <Container>
-      <img src={bgPattern} className="bg-pattern" />
+      <img src={bgPattern} className="bg-pattern" alt="" />
       <ContactWrapper>
         <ContactMessage className="contact-message">
           <h3>Contact Us</h3>
@@ -189,7 +189,7 @@ export default function ContactForm() {
               ></input>
               {formData.name.error && (
                 <span className="form-error">
-                  <img src={errorIcon} draggable={false} />
+                  <img src={errorIcon} draggable={false} alt="form error" />
                   {formData.name.error}
                 </span>
               )}
@@ -206,7 +206,7 @@ export default function ContactForm() {
               ></input>
               {formData.email.error && (
                 <span className="form-error">
-                  <img src={errorIcon} draggable={false} />
+                  <img src={errorIcon} draggable={false} alt="form error" />
                   {formData.email.error}
                 </span>
               )}
@@ -225,7 +225,7 @@ export default function ContactForm() {
               ></input>
               {formData.phoneNumber.error && (
                 <span className="form-error">
-                  <img src={errorIcon} draggable={false} />
+                  <img src={errorIcon} draggable={false} alt="form error" />
                   {formData.phoneNumber.error}
                 </span>
               )}
@@ -242,7 +242,7 @@ export default function ContactForm() {
             ></textarea>
             {formData.message.error && (
               <span className="form-error">
-                <img src={errorIcon} draggable={false} />
+                <img src={errorIcon} draggable={false} alt="form error" />
                 {formData.message.error}
               </span>
             )}

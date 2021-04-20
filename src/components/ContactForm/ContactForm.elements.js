@@ -112,7 +112,7 @@ export const ContactMessage = styled.div`
   }
 `;
 
-export const ContactForm = styled.form`
+export const FormContainer = styled.div`
   width: 380px;
   z-index: 10;
 

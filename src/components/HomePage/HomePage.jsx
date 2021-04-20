@@ -16,7 +16,6 @@ import bgCircle from "../../assets/shared/desktop/bg-pattern-small-circle.svg";
 import bgLeaf from "../../assets/shared/desktop/bg-pattern-leaf.svg";
 
 import { Container } from "../shared/Container.elements";
-import Footer from "../Footer/Footer";
 
 import {
   Hero,
@@ -66,7 +65,7 @@ export default function HomePage() {
             <div>
               <HeroPhone></HeroPhone>
             </div>
-            <img src={heroBg} className="hero-bg" />
+            <img src={heroBg} className="hero-bg" alt="" />
           </Hero>
         </HeroContainer>
         <Container>
@@ -80,13 +79,13 @@ export default function HomePage() {
                 >
                   <CategoryDescription>
                     <h2>Web design</h2>
-                    <a>
+                    <div>
                       View projects{" "}
                       <FontAwesomeIcon
                         icon={faChevronRight}
                         className="chevron-right"
                       ></FontAwesomeIcon>
-                    </a>
+                    </div>
                   </CategoryDescription>
                 </CategoryImage>
               </Link>
@@ -100,13 +99,13 @@ export default function HomePage() {
                   >
                     <CategoryDescription>
                       <h2>App design</h2>
-                      <a>
+                      <div>
                         View projects{" "}
                         <FontAwesomeIcon
                           icon={faChevronRight}
                           className="chevron-right"
                         ></FontAwesomeIcon>
-                      </a>
+                      </div>
                     </CategoryDescription>
                   </CategoryImage>
                 </Link>
@@ -119,13 +118,13 @@ export default function HomePage() {
                   >
                     <CategoryDescription>
                       <h2>Graphic design</h2>
-                      <a>
+                      <div>
                         View projects{" "}
                         <FontAwesomeIcon
                           icon={faChevronRight}
                           className="chevron-right"
                         ></FontAwesomeIcon>
-                      </a>
+                      </div>
                     </CategoryDescription>
                   </CategoryImage>
                 </Link>
@@ -135,11 +134,11 @@ export default function HomePage() {
         </Container>
         <Container>
           <Attributes>
-            <img src={bgLeaf} className="bg-leaf" />
+            <img src={bgLeaf} className="bg-leaf" alt="" />
             <Attribute>
               <AttributeImage>
-                <img src={bgCircle} className="bg-circle"></img>
-                <img src={passionateIllustration}></img>
+                <img src={bgCircle} className="bg-circle" alt=""></img>
+                <img src={passionateIllustration} alt=""></img>
               </AttributeImage>
               <AttributeDesc>
                 <h3>Passionate</h3>
@@ -156,8 +155,9 @@ export default function HomePage() {
                   src={bgCircle}
                   className="bg-circle"
                   id="bg-circle-2"
+                  alt=""
                 ></img>
-                <img src={resourcefulIllustration}></img>
+                <img src={resourcefulIllustration} alt="resourceful"></img>
               </AttributeImage>
               <AttributeDesc>
                 <h3>Resourceful</h3>
@@ -175,8 +175,9 @@ export default function HomePage() {
                   src={bgCircle}
                   className="bg-circle"
                   id="bg-circle-3"
+                  alt=""
                 ></img>
-                <img src={friendlyIllustration}></img>
+                <img src={friendlyIllustration} alt="friendly"></img>
               </AttributeImage>
               <AttributeDesc>
                 <h3>Friendly</h3>

@@ -37,13 +37,13 @@ export default function WebDesignPage() {
           <CategoryImage imageLg={appDesignLg}>
             <CategoryDescription>
               <h2>App design</h2>
-              <a>
+              <div>
                 View projects{" "}
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className="chevron-right"
                 ></FontAwesomeIcon>
-              </a>
+              </div>
             </CategoryDescription>
           </CategoryImage>
         </Link>
@@ -51,13 +51,13 @@ export default function WebDesignPage() {
           <CategoryImage imageLg={graphicDesignLg}>
             <CategoryDescription>
               <h2>Graphic design</h2>
-              <a>
+              <div>
                 View projects{" "}
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className="chevron-right"
                 ></FontAwesomeIcon>
-              </a>
+              </div>
             </CategoryDescription>
           </CategoryImage>
         </Link>

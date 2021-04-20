@@ -63,7 +63,7 @@ export const CategoryDescription = styled.div`
     padding: 0 1rem;
     margin-bottom: 2.25rem;
   }
-  a {
+  div {
     letter-spacing: 5px;
   }
   .chevron-right {
