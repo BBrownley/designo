@@ -46,8 +46,6 @@ export const FooterTop = styled.div`
   position: absolute;
   top: -190px;
   z-index: 10;
-  /* left: 2rem;
-  right: 2rem; */
 
   overflow: hidden;
   > div {
@@ -86,6 +84,13 @@ export const FooterTop = styled.div`
     left: 50%;
     transform: translateX(-50%);
     width: 92%;
+  }
+  @media (max-width: 510px) {
+    padding: 1rem;
+    height: auto;
+    > div:nth-child(1) {
+      width: auto;
+    }
   }
 `;
 
@@ -196,6 +201,6 @@ export const SocialIcon = styled.img`
   }
 
   @media (max-width: 815px) {
-    margin: .75rem;
+    margin: 0.75rem;
   }
 `;
