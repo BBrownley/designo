@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/designo/static/css/main.e8ece89b.chunk.css",
-    "main.js": "/designo/static/js/main.7090e60f.chunk.js",
-    "main.js.map": "/designo/static/js/main.7090e60f.chunk.js.map",
+    "main.js": "/designo/static/js/main.0160df39.chunk.js",
+    "main.js.map": "/designo/static/js/main.0160df39.chunk.js.map",
     "runtime-main.js": "/designo/static/js/runtime-main.de2dfe98.js",
     "runtime-main.js.map": "/designo/static/js/runtime-main.de2dfe98.js.map",
-    "static/js/2.5f2ac0d9.chunk.js": "/designo/static/js/2.5f2ac0d9.chunk.js",
-    "static/js/2.5f2ac0d9.chunk.js.map": "/designo/static/js/2.5f2ac0d9.chunk.js.map",
+    "static/js/2.282c413a.chunk.js": "/designo/static/js/2.282c413a.chunk.js",
+    "static/js/2.282c413a.chunk.js.map": "/designo/static/js/2.282c413a.chunk.js.map",
     "static/js/3.5464ac5b.chunk.js": "/designo/static/js/3.5464ac5b.chunk.js",
     "static/js/3.5464ac5b.chunk.js.map": "/designo/static/js/3.5464ac5b.chunk.js.map",
     "index.html": "/designo/index.html",
     "static/css/main.e8ece89b.chunk.css.map": "/designo/static/css/main.e8ece89b.chunk.css.map",
-    "static/js/2.5f2ac0d9.chunk.js.LICENSE.txt": "/designo/static/js/2.5f2ac0d9.chunk.js.LICENSE.txt",
+    "static/js/2.282c413a.chunk.js.LICENSE.txt": "/designo/static/js/2.282c413a.chunk.js.LICENSE.txt",
     "static/media/bg-pattern-hero-desktop.fdd40c2d.svg": "/designo/static/media/bg-pattern-hero-desktop.fdd40c2d.svg",
     "static/media/bg-pattern-hero-home.7ee19920.svg": "/designo/static/media/bg-pattern-hero-home.7ee19920.svg",
     "static/media/bg-pattern-leaf.b8760898.svg": "/designo/static/media/bg-pattern-leaf.b8760898.svg",
@@ -61,8 +61,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.de2dfe98.js",
-    "static/js/2.5f2ac0d9.chunk.js",
+    "static/js/2.282c413a.chunk.js",
     "static/css/main.e8ece89b.chunk.css",
-    "static/js/main.7090e60f.chunk.js"
+    "static/js/main.0160df39.chunk.js"
   ]
 }
