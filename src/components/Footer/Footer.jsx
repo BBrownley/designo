@@ -86,11 +86,11 @@ export default function Footer() {
             </div>
 
             <Socials>
-              <SocialIcon src={iconFb} />
-              <SocialIcon src={iconYoutube} />
-              <SocialIcon src={iconTwitter} />
-              <SocialIcon src={iconPinterest} />
-              <SocialIcon src={iconInstagram} />
+              <SocialIcon src={iconFb} alt="facebook" />
+              <SocialIcon src={iconYoutube} alt="youtube" />
+              <SocialIcon src={iconTwitter} alt="twitter"/>
+              <SocialIcon src={iconPinterest} alt="pinterest"/>
+              <SocialIcon src={iconInstagram} alt="instagram" />
             </Socials>
           </div>
         </div>
