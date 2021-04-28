@@ -186,6 +186,8 @@ export const Socials = styled.div`
 
 export const SocialIcon = styled.img`
   background-image: url(${props => props.image});
+  height: 24px;
+  width: 24px;
   margin: 0 0.5rem;
 
   &:hover {
