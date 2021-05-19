@@ -185,7 +185,6 @@ export default function ContactForm() {
                 placeholder="Name"
                 value={formData.name.value}
                 onChange={handleSetValue}
-                style={{ paddingRight: formData.name.error ? "200px" : 0 }}
               ></input>
               {formData.name.error && (
                 <span className="form-error">
@@ -202,7 +201,6 @@ export default function ContactForm() {
                 placeholder="Email Address"
                 value={formData.email.value}
                 onChange={handleSetValue}
-                style={{ paddingRight: formData.email.error ? "200px" : 0 }}
               ></input>
               {formData.email.error && (
                 <span className="form-error">
@@ -219,9 +217,6 @@ export default function ContactForm() {
                 placeholder="Phone"
                 value={formData.phoneNumber.value}
                 onChange={handleSetValue}
-                style={{
-                  paddingRight: formData.phoneNumber.error ? "200px" : 0
-                }}
               ></input>
               {formData.phoneNumber.error && (
                 <span className="form-error">
@@ -238,10 +233,9 @@ export default function ContactForm() {
               placeholder="Your Message"
               value={formData.message.value}
               onChange={handleSetValue}
-              style={{ paddingRight: formData.message.error ? "200px" : 0 }}
             ></textarea>
             {formData.message.error && (
-              <span className="form-error">
+              <span className="form-error message-form-error">
                 <img src={errorIcon} draggable={false} alt="form error" />
                 {formData.message.error}
               </span>

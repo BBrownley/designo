@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Container } from "../shared/Container.elements";
 
 export const StyledContainer = styled(Container)`
-  @keyframes example {
+  @keyframes error-anim {
     0% {
       margin-right: 0;
     }
@@ -45,7 +45,7 @@ export const StyledContainer = styled(Container)`
       right: 0;
       top: 0;
       font-style: italic;
-      animation-name: example;
+      animation-name: error-anim;
       animation-duration: 0.25s;
       img {
         margin-right: 0.5rem;
@@ -61,6 +61,21 @@ export const StyledContainer = styled(Container)`
     .bg-pattern {
       top: 0;
       bottom: auto;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .input-container .form-error {
+      bottom: 0.5rem;
+      top: auto;
+      color: #ccc;
+      img {
+        display: none;
+      }
+    }
+    .input-container .message-form-error {
+      bottom: auto;
+      top: 0;
     }
   }
 `;
@@ -163,7 +178,6 @@ export const FormContainer = styled.div`
 
   position: relative;
 
-  /* border: 3px dashed; */
   #submit-button {
     float: right;
     width: 150px;
@@ -177,13 +191,6 @@ export const FormContainer = styled.div`
       margin-bottom: 5rem;
     }
   }
-
-  /* @media (max-width: 620px) {
-    #submit-button {
-      right: 50%;
-      transform: translateX(50%);
-    }
-  } */
 `;
 
 export const MainForm = styled.form`
@@ -199,11 +206,13 @@ export const FormBottom = styled.div`
   .form-message {
     font-weight: bold;
     font-size: 1.25rem;
+    height: 2rem;
+    padding-right: 0.5rem;
   }
   @media (max-width: 400px) {
     flex-direction: column;
     .form-message {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
   }
 `;
