@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Designo - Digital Design Agency Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live site](https://www.brownley.dev/designo/)
 
-## Available Scripts
+This is a multi-page website for a fictitious design agency advertising their portfolio and company. This project was inspired from a challenge I completed on [Frontend Mentor](https://www.frontendmentor.io/), where I was given the design of the project as a Sketch file, and it was up to me to replicate the design using React and styled-components.
 
-In the project directory, you can run:
+## Tech used
 
-### `npm start`
+React, styled-components, and the Leaflet API.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Why? What did I learn?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I used this project as an opportunity to help solidify my skills in working with React and styled-components together. I also wanted to build something that would resemble something that a client would pay for. Because the design was already given to me, it was easier for me to focus on the skills I wanted to improve on, the biggest one being page layout.
 
-### `npm test`
+In this project I made several reusable components with React to do things such as have the Header and Footer appear on all pages of the site and display data from imported JSON. Through completion of this project, I learned how to work with images, make fluid responsive layouts, and have gotten a better understanding of what makes a website look good.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Fully responsive
+* Displays company projects
+* Displays company locations via the Leaflet API
+* Contact form with validation
